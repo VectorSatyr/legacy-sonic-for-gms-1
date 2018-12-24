@@ -3,27 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="2" name="datafiles">
-    <datafiles number="2" name="Audio">
-      <datafile>
-        <name>sf2guile.mp3</name>
-        <exists>-1</exists>
-        <size>7822045</size>
-        <exportAction>2</exportAction>
-        <exportDir></exportDir>
-        <overwrite>0</overwrite>
-        <freeData>-1</freeData>
-        <removeEnd>0</removeEnd>
-        <store>0</store>
-        <ConfigOptions>
-          <Config name="Default">
-            <CopyToMask>9223372036854775807</CopyToMask>
-          </Config>
-        </ConfigOptions>
-        <filename>sf2guile.mp3</filename>
-      </datafile>
-    </datafiles>
-  </datafiles>
+  <datafiles number="2" name="datafiles"/>
   <NewExtensions>
     <extension index="0">extensions\FMODGMS</extension>
   </NewExtensions>
@@ -282,8 +262,6 @@
         <sprites name="Shields">
           <sprite>sprites\LightningShieldSprite</sprite>
           <sprite>sprites\StandardShieldSprite</sprite>
-          <sprite>sprites\WaterShieldShellSprite</sprite>
-          <sprite>sprites\WaterShieldWaveSprite</sprite>
         </sprites>
       </sprites>
       <sprites name="Point Markers">
@@ -300,11 +278,6 @@
         <sprite>sprites\DiagonalYellowSpringSprite</sprite>
         <sprite>sprites\RedSpringSprite</sprite>
         <sprite>sprites\YellowSpringSprite</sprite>
-      </sprites>
-      <sprites name="Swing">
-        <sprite>sprites\SwingBaseSprite</sprite>
-        <sprite>sprites\SwingPoleSprite</sprite>
-        <sprite>sprites\SwingVineSprite</sprite>
       </sprites>
       <sprites name="Terrain Shapes">
         <sprites name="Common">
@@ -932,19 +905,18 @@
         </objects>
       </objects>
       <objects name="Suspensions">
+        <objects name="General">
+          <object>objects\PausedScreen</object>
+          <object>objects\LegalDisclaimer</object>
+        </objects>
         <objects name="Parent">
           <object>objects\GameSuspension</object>
         </objects>
         <objects name="Transitions">
-          <objects name="Parent">
-            <object>objects\ScreenTransition</object>
-            <object>objects\object165</object>
-          </objects>
           <object>objects\FadeIn</object>
           <object>objects\FadeOut</object>
+          <object>objects\ScreenTransition</object>
         </objects>
-        <object>objects\LegalDisclaimer</object>
-        <object>objects\PausedScreen</object>
       </objects>
     </objects>
     <objects name="Level Elements">
