@@ -1,0 +1,13 @@
+/// game_pc_align(character, dir)
+
+var character = argument0;
+var dir = argument1;
+
+with (character) {
+    if (mask_direction != dir) {
+        mask_direction = dir;
+        if (mask_direction mod 90 != 0) {
+            mask_direction = round(mask_direction / 90) * 90;
+        }
+    }
+}
