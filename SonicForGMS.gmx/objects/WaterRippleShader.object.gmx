@@ -54,7 +54,7 @@ final_surface = -1;
 width = -1;
 height = -1;
 
-view_render[max_view_count] = false;
+view_render[MAX_VIEW_COUNT] = false;
 
 shader = RippleShd;
 
@@ -152,7 +152,7 @@ cycle_time = (game_clock_get_step() / room_speed) * cycle_speed;
             <kind>1</kind>
             <string>/// Check visibility
 visible = false;
-for (var n = 0; n &lt; max_view_count; ++n) {
+for (var n = 0; n &lt; MAX_VIEW_COUNT; ++n) {
     view_render[n] = false;
     if (view_visible[n]) {
         with (Water) {

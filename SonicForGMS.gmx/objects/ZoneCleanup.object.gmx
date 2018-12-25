@@ -73,7 +73,7 @@ with (Deactivable) {
 
 with (Camera) {
     var vx, vy, vw, vh;
-    for (var vind = 0; vind &lt; max_view_count; ++vind) {
+    for (var vind = 0; vind &lt; MAX_VIEW_COUNT; ++vind) {
         if (caller[vind] != noone) {
             vx = view_xview[vind] - other.camera_border;
             vy = view_yview[vind] - other.camera_border;

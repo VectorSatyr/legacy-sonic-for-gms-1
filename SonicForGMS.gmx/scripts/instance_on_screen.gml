@@ -12,7 +12,7 @@ if (view_enabled) {
     var y1 = y - padding;
     var x2 = x + padding;
     var y2 = y + padding;
-    for (var vind = 0; vind < max_view_count; ++vind) {
+    for (var vind = 0; vind < MAX_VIEW_COUNT; ++vind) {
         if (view_visible[vind] and rectangle_in_view(x1, y1, x2, y2, vind)) {
             result = true;
             break;

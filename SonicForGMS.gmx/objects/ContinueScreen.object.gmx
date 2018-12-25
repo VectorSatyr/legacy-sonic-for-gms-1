@@ -31,7 +31,7 @@ image_speed = 0;
 state = "countdown";
 countdown = 10 * room_speed;
 
-var center_ox = camera_width * 0.5;
+var center_ox = CAMERA_WIDTH * 0.5;
 
 text = "CONTINUE";
 text_ox = center_ox;
@@ -56,13 +56,13 @@ continue_stars_oy = countdown_oy - 1;
 var file = game_save_find(game_save_current());
 if (instance_exists(file)) {
     continues_count = file.player_continues;
-    continues_max_count = min(continues_count, (camera_width - 16) div 16);
+    continues_max_count = min(continues_count, (CAMERA_WIDTH - 16) div 16);
     continues_sprite = ContinueSonicIconSprite;
 
     switch (file.assist_character) {
     case Tails:
-        instance_create(center_ox - 4, camera_height - 64, ContinueScreenSonic);
-        instance_create(center_ox + 24, camera_height - 64, ContinueScreenTailsAssist);
+        instance_create(center_ox - 4, CAMERA_HEIGHT - 64, ContinueScreenSonic);
+        instance_create(center_ox + 24, CAMERA_HEIGHT - 64, ContinueScreenTailsAssist);
         break;
     default:
         var character = ContinueScreenSonic;
@@ -76,7 +76,7 @@ if (instance_exists(file)) {
             continues_sprite = ContinueKnucklesIconSprite;
             break;
         }
-        instance_create(center_ox, camera_height - 66, character);
+        instance_create(center_ox, CAMERA_HEIGHT - 66, character);
     }
 }
 </string>

@@ -43,7 +43,7 @@
 image_speed = 0;
 
 count = 0;
-limit = default_time_limit;
+limit = 36000;
 enabled = false;
 expired = false;
 

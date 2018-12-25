@@ -36,7 +36,7 @@ complete = false;
 
 player_character = Sonic;
 assist_character = noone;
-player_lives = default_life_count;
+player_lives = STARTING_LIFE_COUNT;
 player_continues = 0;
 location = DemoZone1; //CustomMaskTestRoom; //
 
@@ -181,7 +181,7 @@ if (in_range(index, -1, MAX_GAME_SAVES)) {
     var player = game_player_find(0);
     if (instance_exists(player)) {
         player_character = player.character_id;
-        player_lives = max(player.life_count, default_life_count);
+        player_lives = max(player.life_count, STARTING_LIFE_COUNT);
     }
 
     player = game_player_find(1);

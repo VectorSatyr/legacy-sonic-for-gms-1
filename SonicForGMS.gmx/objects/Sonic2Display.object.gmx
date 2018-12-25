@@ -104,7 +104,7 @@ if (game_is_running()) {
             <string>/// Setup
 
 // lives icon
-post_life_icon = instance_create(camera_width - 64, 8, GameSign);
+post_life_icon = instance_create(CAMERA_WIDTH - 64, 8, GameSign);
 post_life_icon.vind = index;
 post_life_icon.sprite_index = HUDLifeIconSprite;
 switch (owner.character_id) {
@@ -128,7 +128,7 @@ post_rings_header.vind = index;
 post_rings_header.sprite_index = HUDRingsTextSprite;
 
 // lives label
-post_lives = instance_create(camera_width - 15, 17, LabeledGameSign);
+post_lives = instance_create(CAMERA_WIDTH - 15, 17, LabeledGameSign);
 post_lives.vind = index;
 post_lives.font = global.HUDLivesFont;
 post_lives.halign = fa_right;

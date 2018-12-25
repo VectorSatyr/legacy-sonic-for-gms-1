@@ -9,5 +9,5 @@ default:
 
 var file = game_save_find(index);
 with (file) {
-    player_lives = max(player.life_count, default_life_count);
+    player_lives = max(player.life_count, STARTING_LIFE_COUNT);
 }

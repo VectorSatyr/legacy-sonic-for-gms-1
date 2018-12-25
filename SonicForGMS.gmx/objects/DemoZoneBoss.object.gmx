@@ -46,9 +46,9 @@ state = "scanning";
 
 camera_lock = instance_create(x, y, PanningCameraLock);
 camera_lock.left = x;
-camera_lock.right = camera_lock.left + camera_width;
+camera_lock.right = camera_lock.left + CAMERA_WIDTH;
 camera_lock.bottom = 368;
-camera_lock.top = camera_lock.bottom - camera_height;
+camera_lock.top = camera_lock.bottom - CAMERA_HEIGHT;
 
 starting_time = 120;
 finishing_time = 60;
@@ -90,7 +90,7 @@ if (game_is_running()) {
         --starting_time;
         if (starting_time &lt;= 0) {
             game_audio_enqueue_music(ZoneBossMusic, 0, true);
-            mobile = instance_create(camera_lock.left + camera_width - 64, camera_lock.top - 48, GHZBossEggMobile);
+            mobile = instance_create(camera_lock.left + CAMERA_WIDTH - 64, camera_lock.top - 48, GHZBossEggMobile);
             mobile.owner = self;
             mobile.constant = true;
             mobile.camera_left = camera_lock.left;
@@ -111,7 +111,7 @@ if (game_is_running()) {
             }
             with (instance_create(0, 0, CameraLock)) {
                 constant = true;
-                left = room_width - camera_width - 16;
+                left = room_width - CAMERA_WIDTH - 16;
             }
             instance_destroy(camera_lock);
             instance_destroy();

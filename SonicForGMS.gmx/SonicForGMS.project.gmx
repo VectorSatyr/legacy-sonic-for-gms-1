@@ -361,6 +361,12 @@
       <background>background\ScanLinesBack</background>
       <background>background\SolidPixelBack</background>
     </backgrounds>
+    <backgrounds name="Level Backgrounds">
+      <background>background\AzureLakeBack</background>
+      <background>background\AzureLakeTileSet</background>
+      <background>background\OceanBack</background>
+      <background>background\SkyBack</background>
+    </backgrounds>
     <backgrounds name="UI Elements">
       <backgrounds name="Game Over">
         <background>background\GameOverGameTextBack</background>
@@ -1064,6 +1070,10 @@
       </objects>
       <objects name="User Created">
         <objects name="Demo Zone">
+          <objects name="Backgrounds">
+            <object>objects\AzureLakeBackground</object>
+            <object>objects\TestRoomBackground</object>
+          </objects>
           <objects name="Common">
             <object>objects\ConveyorBelt</object>
             <object>objects\Corkscrew</object>
@@ -1358,22 +1368,20 @@
     <room>rooms\CreditsRoom</room>
     <room>rooms\RestartRoom</room>
   </rooms>
-  <constants number="15">
-    <constant name="camera_height">224</constant>
-    <constant name="camera_width">400</constant>
-    <constant name="default_life_count">3</constant>
-    <constant name="default_time_limit">36000</constant>
-    <constant name="max_chaos_emeralds">7</constant>
+  <constants number="13">
+    <constant name="CAMERA_HEIGHT">224</constant>
+    <constant name="CAMERA_WIDTH">400</constant>
     <constant name="MAX_GAME_SAVES">8</constant>
-    <constant name="max_life_count">999</constant>
+    <constant name="MAX_LIFE_COUNT">999</constant>
     <constant name="MAX_LIVES_VIA_RINGS">2</constant>
-    <constant name="max_player_count">2</constant>
-    <constant name="max_rings_count">999</constant>
-    <constant name="max_score_count">999999</constant>
+    <constant name="MAX_PLAYER_COUNT">2</constant>
+    <constant name="MAX_RINGS_COUNT">999</constant>
+    <constant name="MAX_SCORE_COUNT">999999</constant>
     <constant name="MAX_USER_EVENTS">16</constant>
-    <constant name="max_view_count">8</constant>
+    <constant name="MAX_VIEW_COUNT">8</constant>
     <constant name="RINGS_PER_LIFE">100</constant>
-    <constant name="score_per_life">50000</constant>
+    <constant name="SCORE_PER_LIFE">50000</constant>
+    <constant name="STARTING_LIFE_COUNT">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

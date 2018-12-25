@@ -43,16 +43,16 @@ font = global.CreditsFont;
 separation = 9;
 
 current_header = "";
-header_ox = camera_width * 0.5;
-header_oy = camera_height * 0.5;
-header_width = camera_width * 0.875;
+header_ox = CAMERA_WIDTH * 0.5;
+header_oy = CAMERA_HEIGHT * 0.5;
+header_width = CAMERA_WIDTH * 0.875;
 header_height = 0;
 header_color = c_yellow;
 
 current_text = "";
-text_ox = camera_width * 0.5;
-text_oy = camera_height * 0.5;
-text_width = camera_width * 0.875;
+text_ox = CAMERA_WIDTH * 0.5;
+text_oy = CAMERA_HEIGHT * 0.5;
+text_width = CAMERA_WIDTH * 0.875;
 text_height = 0;
 text_color = c_white;
 </string>
@@ -116,7 +116,7 @@ case "enter":
     header_height = string_height_ext(current_header, separation, header_width);
     text_height = string_height_ext(current_text, separation, text_width);
     var height = (header_height * 2) + separation + text_height;
-    var oy = (camera_height * 0.5) - (height * 0.5);
+    var oy = (CAMERA_HEIGHT * 0.5) - (height * 0.5);
     header_oy = oy + (header_height * 0.5);
     text_oy = oy + (header_height * 2) + separation + (text_height * 0.5);
 

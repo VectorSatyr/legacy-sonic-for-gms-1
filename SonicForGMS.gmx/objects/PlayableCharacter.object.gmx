@@ -271,7 +271,7 @@ with (AudioSystem) {
     audio_emitter_gain(other.audio_emitter, volume_sound);
 }
 
-var dist = point_distance(0, 0, camera_width * 0.5, camera_height * 0.5);
+var dist = point_distance(0, 0, CAMERA_WIDTH * 0.5, CAMERA_HEIGHT * 0.5);
 audio_emitter_falloff(audio_emitter, dist, dist * 1.5, 1);
 
 sounds = ds_map_create();

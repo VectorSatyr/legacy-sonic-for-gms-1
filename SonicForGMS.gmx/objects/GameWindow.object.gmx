@@ -102,7 +102,7 @@ if (fullscreen_enabled) {
             <string>/// Reframe
 view_enabled = true;
 
-for (vind = 0; vind &lt; max_view_count; ++vind) {
+for (vind = 0; vind &lt; MAX_VIEW_COUNT; ++vind) {
     view_visible[vind] = false;
     view_xport[vind] = 0;
     view_yport[vind] = 0;

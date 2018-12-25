@@ -28,9 +28,9 @@
             <string>/// Initialize
 image_speed = 0;
 
-for (var vind = 0; vind &lt; max_view_count; ++vind) {
-    view_wview[vind] = camera_width;
-    view_hview[vind] = camera_height;
+for (var vind = 0; vind &lt; MAX_VIEW_COUNT; ++vind) {
+    view_wview[vind] = CAMERA_WIDTH;
+    view_hview[vind] = CAMERA_HEIGHT;
     script[vind] = -1;
     caller[vind] = id;
 }
@@ -58,7 +58,7 @@ for (var vind = 0; vind &lt; max_view_count; ++vind) {
             <kind>1</kind>
             <string>/// Execute camera behavior
 if (game_is_running()) {
-    for (var vind = 0; vind &lt; max_view_count; ++vind) {
+    for (var vind = 0; vind &lt; MAX_VIEW_COUNT; ++vind) {
         if (script_exists(script[vind])) {
             with (caller[vind]) {
                 script_execute(other.script[vind], vind);

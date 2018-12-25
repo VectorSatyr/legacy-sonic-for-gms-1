@@ -72,15 +72,15 @@ layer.timeline_running = true;
 layer.timeline_loop = true;
 layer.timeline_speed = 1;
 
-var center_x = camera_width * 0.5;
+var center_x = CAMERA_WIDTH * 0.5;
 
 // title
-var title = instance_create(center_x, camera_height - 24, LabeledGameSign);
+var title = instance_create(center_x, CAMERA_HEIGHT - 24, LabeledGameSign);
 title.label = "FILE SELECT";
 title.font = global.GaslightFont;
 title.halign = fa_center;
 
-var title_shadow = instance_create(center_x + 6, camera_height - 18, LabeledGameSign);
+var title_shadow = instance_create(center_x + 6, CAMERA_HEIGHT - 18, LabeledGameSign);
 title_shadow.image_blend = c_black;
 title_shadow.image_alpha = 0.5;
 title_shadow.depth = title.depth + 1;

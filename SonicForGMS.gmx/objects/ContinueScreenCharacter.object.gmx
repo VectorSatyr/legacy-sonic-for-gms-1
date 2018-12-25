@@ -55,7 +55,7 @@ x_speed = 16;
 switch (state) {
 case "exiting":
     x += x_speed;
-    if (x &gt; camera_width + 80) {
+    if (x &gt; CAMERA_WIDTH + 80) {
         instance_destroy();
     }
     break;

@@ -12,4 +12,4 @@
 // ---------------------------------------------------------------
 var vind = argument0;
 // ---------------------------------------------------------------
-return in_range(vind, -1, max_view_count);
+return in_range(vind, -1, MAX_VIEW_COUNT);

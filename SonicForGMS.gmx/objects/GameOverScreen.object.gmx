@@ -42,8 +42,8 @@
             <string>/// Initialize
 image_speed = 0;
 
-text_screen_x = camera_width * 0.5;
-text_screen_y = camera_height * 0.5;
+text_screen_x = CAMERA_WIDTH * 0.5;
+text_screen_y = CAMERA_HEIGHT * 0.5;
 text_screen_ox = 256 + text_screen_x;
 text_enter_speed = 16;
 state = 0;

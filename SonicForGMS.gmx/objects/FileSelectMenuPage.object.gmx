@@ -102,7 +102,7 @@ delete_icon = instance_create(choice_delete.x, choice_delete.y, FileSelectMenuDe
 // cursor
 cursor = instance_create(starting_slot.x, starting_slot.y, FileSelectMenuCursor);
 game_camera_direct(0, game_camera_default_behavior, cursor);
-view_hborder[0] = camera_width * 0.5;
+view_hborder[0] = CAMERA_WIDTH * 0.5;
 with (cursor) {
     game_camera_default_behavior(0);
 }

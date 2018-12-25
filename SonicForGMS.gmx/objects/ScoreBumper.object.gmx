@@ -42,7 +42,7 @@
             <string>/// Initialize
 reaction_script = player_react_to_score_bumper;
 
-for (var n = 0; n &lt; max_player_count; ++n) {
+for (var n = 0; n &lt; MAX_PLAYER_COUNT; ++n) {
     counter[n] = 10;
 }
 </string>

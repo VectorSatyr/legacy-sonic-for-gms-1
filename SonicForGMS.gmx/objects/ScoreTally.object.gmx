@@ -58,17 +58,17 @@ with (player) {
 header_text1 = character_name + " GOT";
 header_text2 = "THROUGH ACT";
 
-header_screen_x1 = (camera_width * 0.5) - (string_width(header_text1) * 0.5);
+header_screen_x1 = (CAMERA_WIDTH * 0.5) - (string_width(header_text1) * 0.5);
 header_screen_y1 = 56;
 
-header_screen_x2 = (camera_width * 0.5) - (string_width(header_text2) * 0.5);
+header_screen_x2 = (CAMERA_WIDTH * 0.5) - (string_width(header_text2) * 0.5);
 header_screen_y2 = 74;
 
-act_screen_x = (camera_width * 0.5) + 88;
+act_screen_x = (CAMERA_WIDTH * 0.5) + 88;
 act_screen_y = 62;
 
-score_label_screen_x = (camera_width * 0.5) - 104;
-score_value_screen_x = (camera_width * 0.5) + 96;
+score_label_screen_x = (CAMERA_WIDTH * 0.5) - 104;
+score_value_screen_x = (CAMERA_WIDTH * 0.5) + 96;
 continues_screen_x = score_value_screen_x + 16;
 time_score_screen_x = score_label_screen_x + 13;
 time_score_screen_y = 112;
@@ -82,10 +82,10 @@ continues_screen_y = total_score_screen_y - 6;
 
 header_enter_speed = 16;
 header_ox1 = ceil_to(header_screen_x1 + string_width(header_text1), header_enter_speed);
-header_ox2 = ceil_to(camera_width - header_screen_x2, header_enter_speed);
+header_ox2 = ceil_to(CAMERA_WIDTH - header_screen_x2, header_enter_speed);
 
 score_value_enter_speed = 16;
-time_score_ox = ceil_to(camera_width - score_label_screen_x, score_value_enter_speed);
+time_score_ox = ceil_to(CAMERA_WIDTH - score_label_screen_x, score_value_enter_speed);
 ring_score_ox = time_score_ox + score_value_enter_speed;
 perfect_score_ox = time_score_ox + (score_value_enter_speed * 2);
 total_score_ox = time_score_ox + (score_value_enter_speed * 3);
@@ -308,7 +308,7 @@ if (game_is_running()) {
           <argument>
             <kind>1</kind>
             <string>/// Draw scorecard
-if (view_current &lt; max_player_count) {
+if (view_current &lt; MAX_PLAYER_COUNT) {
     var color = draw_get_color();
     var x1 = view_xview[view_current];
     var y1 = view_yview[view_current];
