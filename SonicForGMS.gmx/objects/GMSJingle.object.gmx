@@ -40,25 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize
-soundid = LifeUpMusic;
-priority = 10;
-loops = false;
-time = audio_sound_length(soundid) * room_speed;
 track_position = 0;
-fade_time = 120;
-
-event_user(0);
-
-with (GameMusic) {
-    if (next == -1 and id != other) {
-        if (index != -1) {
-            other.track_position = audio_sound_get_track_position(index);
-            event_user(1);
-        }
-        next = other;
-        other.previous = id;
-    }
-}
 </string>
           </argument>
         </arguments>
@@ -101,13 +83,6 @@ if (next == -1 and previous != -1) {
         audio_sound_set_track_position(previous.index, track_position);
         game_audio_fade_in(previous, fade_time);
     }
-/*
-        with (GMSAudioSystem) {
-            audio_sound_set_track_position(other.previous.index, other.track_position);
-            audio_sound_gain(other.previous.index, 0, 0);
-            audio_sound_gain(other.previous.index, volume_music, other.fade_time);
-        }
-*/
 }
 </string>
           </argument>

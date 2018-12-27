@@ -74,7 +74,7 @@ image_index = 1;
           <argument>
             <kind>1</kind>
             <string>/// Change frame
-image_index = 3;
+image_index = 2;
 </string>
           </argument>
         </arguments>

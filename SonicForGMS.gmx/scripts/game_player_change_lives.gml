@@ -8,7 +8,7 @@ with (player) {
     game_player_set_lives(self, life_count + amount);
     if (life_count != count) {
         if (sign(amount) > 0) {
-            instance_create(0, 0, LifeUpJingle);
+            game_audio_enqueue_jingle(LifeUpMusic);
         }
     }
 }
