@@ -25,6 +25,7 @@ case "step":
         facing_sign = -facing_sign;
         x_speed = 4 * facing_sign;
         y_speed = -4;
+        game_pc_play_sound(self, JumpSound);
         return false;
     }
 

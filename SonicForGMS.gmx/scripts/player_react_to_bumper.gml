@@ -17,6 +17,11 @@ case "entering":
         game_pc_perform(self, player_is_falling);
     }
 
+    if (state == player_is_aqua_bouncing) {
+        game_pc_perform(self, player_is_jumping);
+        game_pc_play_sound(self, AquaBounceSound);
+    }
+
     var bounce_direction = angle_wrap(round(point_direction(ind.x, ind.y, x_int, y_int)) - mask_direction);
 
     x_speed = dcos(bounce_direction) * ind.force;

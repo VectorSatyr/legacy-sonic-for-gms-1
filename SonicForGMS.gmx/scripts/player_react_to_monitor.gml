@@ -20,6 +20,10 @@ case "entering":
             break;
         } else if (y_speed >= 0 and game_pc_lower_in_shape(self, ind, y_radius)) {
             y_speed = -y_speed;
+            if (state == player_is_aqua_bouncing) {
+                game_pc_perform(self, player_is_jumping);
+                game_pc_play_sound(self, AquaBounceSound);
+            }
         }
     }
 

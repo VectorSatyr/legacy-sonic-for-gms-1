@@ -40,7 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize
-icon_index = 7;
+icon_index = 8;
 </string>
           </argument>
         </arguments>
@@ -63,11 +63,11 @@ icon_index = 7;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Gain lightning shield
+            <string>/// Gain shield
 with (player) {
     if (state != player_is_defeated and state != player_is_drowning) {
-        game_pc_gain_shield(self, LightningShield);
-        game_pc_play_sound(self, LightningShieldSound);
+        game_pc_gain_shield(self, FlameShield);
+        game_pc_play_sound(self, FlameShieldSound);
     }
 }
 </string>

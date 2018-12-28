@@ -73,12 +73,16 @@
             <sound>sound\LandingSound</sound>
           </sounds>
           <sounds name="Shields">
-            <sound>sound\LightningShieldSound</sound>
+            <sound>sound\AquaShieldSound</sound>
+            <sound>sound\FlameShieldSound</sound>
             <sound>sound\ShieldSound</sound>
+            <sound>sound\ThunderShieldSound</sound>
           </sounds>
           <sounds name="Sonic">
-            <sound>sound\DoubleJumpSound</sound>
+            <sound>sound\AquaBounceSound</sound>
             <sound>sound\DropDashSound</sound>
+            <sound>sound\FlameDashSound</sound>
+            <sound>sound\ThunderJumpSound</sound>
           </sounds>
           <sounds name="Tails">
             <sound>sound\FlightFallSound</sound>
@@ -157,7 +161,7 @@
         <sprite>sprites\DropDashDustSprite</sprite>
         <sprite>sprites\ExplosionSprite</sprite>
         <sprite>sprites\HeavyExplosionSprite</sprite>
-        <sprite>sprites\LightningShieldSparkSprite</sprite>
+        <sprite>sprites\ThunderShieldSparkSprite</sprite>
         <sprite>sprites\RingSparkleSprite</sprite>
         <sprite>sprites\SplashSprite</sprite>
       </sprites>
@@ -260,8 +264,13 @@
           <sprite>sprites\InvincibilitySparkSprite</sprite>
         </sprites>
         <sprites name="Shields">
-          <sprite>sprites\LightningShieldSprite</sprite>
+          <sprite>sprites\AquaShieldBounceSprite</sprite>
+          <sprite>sprites\AquaShieldShellSprite</sprite>
+          <sprite>sprites\AquaShieldWaveSprite</sprite>
+          <sprite>sprites\FlameShieldDashSprite</sprite>
+          <sprite>sprites\FlameShieldShellSprite</sprite>
           <sprite>sprites\StandardShieldSprite</sprite>
+          <sprite>sprites\ThunderShieldSprite</sprite>
         </sprites>
       </sprites>
       <sprites name="Point Markers">
@@ -555,9 +564,15 @@
                 <script>scripts\player_is_lifting.gml</script>
               </scripts>
               <scripts name="Sonic">
-                <script>scripts\player_is_drop_dashing.gml</script>
-                <script>scripts\player_is_super_sonic_flying.gml</script>
-                <script>scripts\player_perform_double_jump.gml</script>
+                <scripts name="Actions">
+                  <script>scripts\player_is_aqua_bouncing.gml</script>
+                  <script>scripts\player_is_drop_dashing.gml</script>
+                  <script>scripts\player_is_super_sonic_flying.gml</script>
+                </scripts>
+                <scripts name="Movement">
+                  <script>scripts\player_perform_flame_dash.gml</script>
+                  <script>scripts\player_perform_thunder_jump.gml</script>
+                </scripts>
               </scripts>
               <scripts name="Tails">
                 <script>scripts\player_is_flying.gml</script>
@@ -868,8 +883,10 @@
                 <object>objects\PlayerShield</object>
               </objects>
               <objects name="Specific">
-                <object>objects\LightningShield</object>
+                <object>objects\AquaShield</object>
+                <object>objects\FlameShield</object>
                 <object>objects\StandardShield</object>
+                <object>objects\ThunderShield</object>
               </objects>
             </objects>
           </objects>
@@ -977,15 +994,17 @@
             <object>objects\Monitor</object>
           </objects>
           <objects name="Icons">
+            <object>objects\AquaShieldIcon</object>
             <object>objects\EggmanIcon</object>
             <object>objects\ExtraLifeIcon</object>
+            <object>objects\FlameShieldIcon</object>
             <object>objects\InvincibilityIcon</object>
-            <object>objects\LightningShieldIcon</object>
             <object>objects\MonitorIcon</object>
             <object>objects\RingsIcon</object>
             <object>objects\ShieldIcon</object>
             <object>objects\SuperFormIcon</object>
             <object>objects\SuperSpeedIcon</object>
+            <object>objects\ThunderShieldIcon</object>
           </objects>
         </objects>
         <objects name="Parents">
@@ -1326,8 +1345,13 @@
             <timeline>timelines\InvincibilitySparkAnim4</timeline>
           </timelines>
           <timelines name="Shields">
-            <timeline>timelines\LightningShieldAnim</timeline>
+            <timeline>timelines\AquaShieldAnim</timeline>
+            <timeline>timelines\AquaShieldBounceAnim</timeline>
+            <timeline>timelines\AquaShieldRecoilAnim</timeline>
+            <timeline>timelines\FlameShieldAnim</timeline>
+            <timeline>timelines\FlameShieldDashAnim</timeline>
             <timeline>timelines\StandardShieldAnim</timeline>
+            <timeline>timelines\ThunderShieldAnim</timeline>
           </timelines>
         </timelines>
       </timelines>

@@ -111,8 +111,8 @@
     <instance objName="Sonic2Capsule" x="2848" y="336" name="inst_D31FBACD" locked="0" code="ds_list_add(small_animals, Flicky);&#xA;ds_list_add(small_animals, Ricky);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="WaterRippleShader" x="80" y="0" name="inst_A731338C" locked="0" code="" scaleX="1" scaleY="1" colour="4278223103" rotation="0"/>
     <instance objName="SampleBridge" x="1632" y="352" name="inst_7E54D328" locked="0" code="" scaleX="18" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Monitor" x="176" y="256" name="inst_B5E6C9C7" locked="0" code="icon = ShieldIcon;&#xA;//type = 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Monitor" x="416" y="256" name="inst_4DB22415" locked="0" code="icon = LightningShieldIcon;&#xA;//type = 6;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="112" y="256" name="inst_B5E6C9C7" locked="0" code="icon = ShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="208" y="256" name="inst_4DB22415" locked="0" code="icon = ThunderShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="SpikeTrap" x="688" y="352" name="inst_42FD4C0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Region" x="2048" y="0" name="inst_8DF23226" locked="0" code="" scaleX="2" scaleY="44" colour="4294967295" rotation="0"/>
     <instance objName="DemoZoneBoss" x="2048" y="0" name="inst_85E07B3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -126,6 +126,8 @@
     <instance objName="DevVisualization" x="112" y="0" name="inst_ED9B6DAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="PauseControl" x="64" y="0" name="inst_89F4881A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="AzureLakeBackground" x="128" y="0" name="inst_53CDDB1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="256" y="256" name="inst_CB65F34D" locked="0" code="icon = FlameShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="160" y="256" name="inst_FA309D08" locked="0" code="icon = AquaShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -20,8 +20,6 @@ case "start":
     image_angle = gravity_direction;
     timeline_speed /= max(5 - floor(abs(x_speed)), 1);
 
-    game_pc_play_sound(self, JumpSound);
-
     game_pc_camera_direct(self, game_pc_camera_state_aerial);
     break;
 
@@ -58,19 +56,18 @@ case "step":
         case Sonic:
             if (shield != noone) {
                 switch (shield.object_index) {
-                case LightningShield:
-                    player_perform_double_jump();
-                    break;
-                default:
-                    return game_pc_perform(self, player_is_drop_dashing);
+                case AquaShield: return game_pc_perform(self, player_is_aqua_bouncing); break;
+                case ThunderShield: player_perform_thunder_jump(); break;
+                case FlameShield: player_perform_flame_dash(); break;
+                default: return game_pc_perform(self, player_is_drop_dashing);
                 }
             } else {
-                if (owner.rings >= 50 and 
-                    not (superform or recovery_time > 0 or invincibility_time > 0) and 
+                if (superform) {
+                    return game_pc_perform(self, player_is_super_sonic_flying);
+                } else if (owner.rings >= 50 and 
+                    not (recovery_time > 0 or invincibility_time > 0) and 
                     game_save_all_emeralds_found(game_save_current())) {
                     return game_pc_perform(self, player_is_transforming);
-                } else if (superform) {
-                    return game_pc_perform(self, player_is_super_sonic_flying);
                 } else {
                     return game_pc_perform(self, player_is_drop_dashing);
                 }

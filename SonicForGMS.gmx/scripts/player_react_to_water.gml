@@ -19,10 +19,12 @@ case "entering":
 
         if (shield != noone) {
             switch (shield.object_index) {
-            case LightningShield:
+            case ThunderShield:
                 with (WaterBlend) {
                     flashing = 4;
                 }
+            
+            case FlameShield:
                 instance_destroy(shield);
                 shield = noone;
                 break;

@@ -44,6 +44,10 @@ with (character) {
     switch (object_index) {
     case Sonic:
         drop_dash_time = 0;
+        aqua_bound_force = 8;
+        aqua_bounce_force = 7.5;
+        thunder_jump_force = 5.5;
+        flame_dash_speed = 8;
         if (superform) {
             speed_cap = 10;
             land_acceleration *= 4;

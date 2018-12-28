@@ -72,50 +72,6 @@ if (game_is_running()) {
         }
     }
 }
-
-/*
-            with (player_id) {
-                if (state != player_is_defeated) {
-                    switch (other.image_index) {
-                    case 1: // eggman
-                        player_take_hit(id, sndHurt);
-                        break;
-            
-                    case 2: // big 10 rings
-                        player_gain_rings(index, 10);
-                        break;
-            
-                    case 3: // superspeed
-                        superspeed_time = 1200;
-                        player_update_physics_values();
-                        break;
-            
-                    case 4:
-                        player_gain_shield(StandardShield);
-                        audio_play_sound_on(audio_emitter, ShieldSnd, false, 0);
-                        break;
-
-                    case 6:
-                        player_gain_shield(LightningShield);
-                        audio_play_sound_on(audio_emitter, LightningShieldSnd, false, 0);
-                        break;
-
-                    case 5:
-                    case 7: // shields
-                        break;
-            
-                    case 8: // invincibility
-                        break;
-            
-                    default: // life
-                        player_gain_lives(index, 1);
-                    }
-                }
-            }
-            player_id = noone;
-        }
-    }
-
 </string>
           </argument>
         </arguments>

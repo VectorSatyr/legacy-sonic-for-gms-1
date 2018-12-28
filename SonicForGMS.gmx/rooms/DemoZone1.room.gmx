@@ -150,7 +150,7 @@
     <instance objName="SpikeTrap" x="576" y="864" name="inst_DBE624EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="CameraLock" x="2408" y="128" name="inst_3900F31B" locked="0" code="left = x - CAMERA_WIDTH * 0.5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="RectangleTerrain" x="2672" y="128" name="inst_9ADEDA5C" locked="0" code="constant = true;&#xA;" scaleX="2" scaleY="28" colour="4294967295" rotation="0"/>
-    <instance objName="Monitor" x="1560" y="368" name="inst_0C24CCBD" locked="0" code="icon = LightningShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="1560" y="368" name="inst_0C24CCBD" locked="0" code="icon = ThunderShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ZoneTitle" x="32" y="0" name="inst_A9C61FB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="DevVisualization" x="128" y="0" name="inst_81E6DD73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ZoneCleanup" x="48" y="0" name="inst_BB3CDD65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

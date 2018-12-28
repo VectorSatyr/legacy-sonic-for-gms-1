@@ -108,9 +108,9 @@ drop_dash_dust = part_type_create();
 part_type_sprite(drop_dash_dust, DropDashDustSprite, 1, 1, 0);
 part_type_life(drop_dash_dust, 16, 16);
 
-lightning_spark = part_type_create();
-part_type_sprite(lightning_spark, LightningShieldSparkSprite, 1, 0, 0);
-part_type_life(lightning_spark, 21, 21);
+thunder_spark = part_type_create();
+part_type_sprite(thunder_spark, ThunderShieldSparkSprite, 1, 0, 0);
+part_type_life(thunder_spark, 21, 21);
 
 capsule_lock = part_type_create();
 part_type_sprite(capsule_lock, CapsuleLockSprite, 0, 0, 0);
