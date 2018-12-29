@@ -29,5 +29,12 @@ with (character) {
         if (invincibility_time > 0 or superform) {
             shield.visible = false;
         }
+        if (kind == AquaShield and underwater) {
+            remaining_air_time = 0;
+            if (instance_exists(drowning_music)) {
+                instance_destroy(drowning_music);
+                drowning_music = noone;
+            }
+        }
     }
 }

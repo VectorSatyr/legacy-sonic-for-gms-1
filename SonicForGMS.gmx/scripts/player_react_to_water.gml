@@ -19,6 +19,10 @@ case "entering":
 
         if (shield != noone) {
             switch (shield.object_index) {
+            case AquaShield:
+                remaining_air_time = 0;
+                break;
+            
             case ThunderShield:
                 with (WaterBlend) {
                     flashing = 4;
@@ -65,8 +69,10 @@ case "exiting":
 
         game_pc_play_sound(self, SplashSound);
 
-        instance_destroy(drowning_music);
-        drowning_music = noone;
+        if (instance_exists(drowning_music)) {
+            instance_destroy(drowning_music);
+            drowning_music = noone;
+        }
     }
     break;
 }

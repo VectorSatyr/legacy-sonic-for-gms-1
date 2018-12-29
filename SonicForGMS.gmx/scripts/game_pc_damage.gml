@@ -27,6 +27,9 @@ with (character) {
         state != player_is_hurt and state != player_is_defeated and 
         state != player_is_drowning) {
         if (shield != noone) {
+            if (shield.object_index == AquaShield and underwater) {
+                remaining_air_time = default_remaining_air_time;
+            }
             instance_destroy(shield);
             shield = noone;
             game_pc_play_sound(self, soundid);

@@ -127,7 +127,8 @@
     <instance objName="PauseControl" x="64" y="0" name="inst_89F4881A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="AzureLakeBackground" x="128" y="0" name="inst_53CDDB1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Monitor" x="256" y="256" name="inst_CB65F34D" locked="0" code="icon = FlameShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Monitor" x="160" y="256" name="inst_FA309D08" locked="0" code="icon = AquaShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="448" y="656" name="inst_FA309D08" locked="0" code="icon = AquaShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="SpikeTrap" x="560" y="656" name="inst_CA8EEBF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

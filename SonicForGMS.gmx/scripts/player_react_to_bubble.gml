@@ -26,8 +26,10 @@ case "entering":
 
     game_pc_play_sound(self, BreatheSound);
 
-    instance_destroy(drowning_music);
-    drowning_music = noone;
+    if (instance_exists(drowning_music)) {
+        instance_destroy(drowning_music);
+        drowning_music = noone;
+    }
 
     instance_destroy(ind);
     break;
