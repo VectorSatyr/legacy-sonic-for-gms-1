@@ -98,6 +98,13 @@ if (game_is_running()) {
         timeline_set(self, TailsTailsSpinDashAnim, 1, true, false);
         break;
 
+    case "hang":
+        if (timeline_index != TailsTailsHangAnim) {
+            timeline_index = TailsTailsHangAnim;
+            timeline_position = 0;
+        }
+        break;
+
     default:
         visible = false;
     }

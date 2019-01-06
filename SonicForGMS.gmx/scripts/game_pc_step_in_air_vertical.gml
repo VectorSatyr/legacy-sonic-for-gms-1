@@ -20,7 +20,6 @@ with (character) {
     game_pc_position(self, x + (dsin(direction) * step), y + (dcos(direction) * step));
     game_pc_refresh_local_index(self);
     game_pc_trigger_reactions(self);
-    
     if (state != player_is_defeated) {
         game_pc_find_ceiling(self, y_radius);
         if (y_speed >= 0) {

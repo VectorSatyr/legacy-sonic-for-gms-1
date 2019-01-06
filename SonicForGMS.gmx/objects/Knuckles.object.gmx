@@ -66,6 +66,7 @@ game_pc_define_animation(self, "transform", KnucklesTransformAnim);
 game_pc_define_animation(self, "teeter_front", KnucklesTeeterFrontAnim);
 game_pc_define_animation(self, "teeter_back", KnucklesTeeterBackAnim);
 game_pc_define_animation(self, "teeter_loop", KnucklesTeeterLoopAnim);
+game_pc_define_animation(self, "hang", KnucklesHangAnim);
 </string>
           </argument>
         </arguments>

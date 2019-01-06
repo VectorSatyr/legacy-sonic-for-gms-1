@@ -193,6 +193,9 @@ if (game_is_running()) {
     
             if (character.state == player_is_jumping) {
                 character.input_action = true;
+                if (target.input_up and target.input_action_pressed) {
+                    character.input_action_pressed = true;
+                }
             } else {
                 character.input_action = false;
             }

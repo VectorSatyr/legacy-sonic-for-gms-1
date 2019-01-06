@@ -59,6 +59,7 @@ game_pc_define_animation(self, "drown", SonicDrownAnim);
 game_pc_define_animation(self, "transform", SonicTransformAnim);
 game_pc_define_animation(self, "teeter_front", SonicTeeterFrontAnim);
 game_pc_define_animation(self, "teeter_back", SonicTeeterBackAnim);
+game_pc_define_animation(self, "hang", SonicHangAnim);
 </string>
           </argument>
         </arguments>

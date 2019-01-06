@@ -16,6 +16,8 @@ case "start":
     spinning = false;
 
     flight_force = flight_base_force;
+    flight_link = instance_create(x_int, y_int + flight_link_offset, TailsFlightLink);
+    flight_link.source = self;
 
     game_pc_animate(self, "flight");
     game_pc_camera_direct(self, game_pc_camera_state_aerial);
@@ -24,6 +26,9 @@ case "start":
 case "finish":
     if (audio_is_playing(flight_soundid)) {
         audio_stop_sound(flight_soundid);
+    }
+    if (instance_exists(flight_link)) {
+        instance_destroy(flight_link);
     }
     break;
 
@@ -75,7 +80,7 @@ case "step":
     if (flight_time > 0) {
         flight_time--;
     }
-
+    
     if (flight_time) {
         game_pc_animate(self, "flight");
         if (not audio_is_playing(FlightSound)) {
@@ -89,7 +94,5 @@ case "step":
             flight_soundid = game_pc_play_sound(self, FlightFallSound, 0);
         }
     }
-
-    //player_change_animation_speed(1);
     break;
 }

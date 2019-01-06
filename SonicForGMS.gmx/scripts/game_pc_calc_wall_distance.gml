@@ -36,6 +36,8 @@ with (character) {
                 break;
             }
         }
+
+        distance = 0; // no escape
     } else {
         for (var ox = radius; ox > -1; --ox) {
             if (not game_pc_arms_in_shape(self, ind, ox)) {

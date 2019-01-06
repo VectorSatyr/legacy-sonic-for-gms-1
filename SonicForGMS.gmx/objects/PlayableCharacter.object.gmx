@@ -289,6 +289,56 @@ stage_end = false;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Initialize state machine
+owner = noone;
+
+state = player_is_ready;
+state_previous = -1;
+state_changed = false;
+
+spinning = false;
+rolling_jump = false;
+underwater = false;
+superform = false;
+
+jump_action_available = true;
+
+spindash_charge = 0;
+spindash_atrophy = 0.96875;
+
+input_up = false;
+input_down = false;
+input_left = false;
+input_right = false;
+input_action = false;
+
+input_up_pressed = false;
+input_down_pressed = false;
+input_left_pressed = false;
+input_right_pressed = false;
+input_action_pressed = false;
+
+horizontal_axis_value = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="1" enumb="0">
       <action>
@@ -504,6 +554,42 @@ if (game_is_running()) {
         <isnot>0</isnot>
       </action>
     </event>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw mask
+if (mask_visible) {
+    if (mask_direction mod 180) {
+        draw_rectangle_color(x_int - y_radius, y_int - x_radius, x_int + y_radius, y_int + x_radius, c_lime, c_lime, c_lime, c_lime, true);
+        draw_line_color(x_int, y_int - x_wall_radius, x_int, y_int + x_wall_radius, c_white, c_white);
+    } else {
+        draw_rectangle_color(x_int - x_radius, y_int - y_radius, x_int + x_radius, y_int + y_radius, c_lime, c_lime, c_lime, c_lime, true);
+        draw_line_color(x_int - x_wall_radius, y_int, x_int + x_wall_radius, y_int, c_white, c_white);
+    }
+
+    var sine = dsin(mask_direction);
+    var cosine = dcos(mask_direction);
+    draw_line_color(x_int, y_int, x_int + sine * y_radius, y_int + cosine * y_radius, c_white, c_white);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -539,20 +625,6 @@ if (sprite_index &gt; -1) {
 
     // ready to draw
     draw_sprite_ext(sprite_index, image_index, x_int, y_int, image_xscale * facing_sign, image_yscale, angle, blend, alpha);
-}
-
-if (mask_visible) {
-    if (mask_direction mod 180) {
-        draw_rectangle_color(x_int - y_radius, y_int - x_radius, x_int + y_radius, y_int + x_radius, c_lime, c_lime, c_lime, c_lime, true);
-        draw_line_color(x_int, y_int - x_wall_radius, x_int, y_int + x_wall_radius, c_white, c_white);
-    } else {
-        draw_rectangle_color(x_int - x_radius, y_int - y_radius, x_int + x_radius, y_int + y_radius, c_lime, c_lime, c_lime, c_lime, true);
-        draw_line_color(x_int - x_wall_radius, y_int, x_int + x_wall_radius, y_int, c_white, c_white);
-    }
-
-    var sine = dsin(mask_direction);
-    var cosine = dcos(mask_direction);
-    draw_line_color(x_int, y_int, x_int + sine * y_radius, y_int + cosine * y_radius, c_white, c_white);
 }
 </string>
           </argument>

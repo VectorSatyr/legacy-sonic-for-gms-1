@@ -64,6 +64,11 @@ game_pc_define_animation(self, "drown", TailsDrownAnim);
 game_pc_define_animation(self, "transform", TailsTransformAnim);
 game_pc_define_animation(self, "teeter_front", TailsTeeterAnim);
 game_pc_define_animation(self, "teeter_back", TailsTeeterAnim);
+game_pc_define_animation(self, "hang", TailsHangAnim);
+game_pc_define_animation(self, "carry", TailsCarryAnim);
+game_pc_define_animation(self, "carry_rise", TailsCarryRisingAnim);
+game_pc_define_animation(self, "carry_fall", TailsCarryFallAnim);
+game_pc_define_animation(self, "swim_carry_fall", TailsSwimCarryFallAnim);
 </string>
           </argument>
         </arguments>

@@ -67,6 +67,8 @@ with (character) {
         flight_ascend_force = 0.125;
         flight_force = flight_base_force;
         flight_threshold = -1;
+        flight_link = noone;
+        flight_link_offset = 30;
         if (superform) {
             speed_cap = 8;
             land_acceleration *= 2;
