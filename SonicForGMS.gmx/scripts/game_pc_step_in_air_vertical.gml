@@ -22,9 +22,8 @@ with (character) {
     game_pc_trigger_reactions(self);
     
     if (state != player_is_defeated) {
-        if (sign(y_speed) < 0) {
-            game_pc_find_ceiling(self, y_radius);
-        } else {
+        game_pc_find_ceiling(self, y_radius);
+        if (y_speed >= 0) {
             game_pc_find_ground(self, y_radius);
         }
     

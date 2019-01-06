@@ -9,7 +9,7 @@ with (character) {
         ind = reaction_list[| n];
         if (instance_exists(ind)) {
             if (script_exists(ind.reaction_script) and ds_list_find_index(previous_reaction_list, ind) == -1) {
-                script_execute(ind.reaction_script, ind, "enter");
+                script_execute(ind.reaction_script, ind, "entering");
             }
         }
     }

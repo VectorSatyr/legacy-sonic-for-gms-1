@@ -11,5 +11,8 @@ with (player) {
         character.owner = id;
         character.camera.vind = index;
         game_pc_camera_connect(character);
+        with (DevVisualization) {
+            other.character.mask_visible = visible;
+        }
     }
 }

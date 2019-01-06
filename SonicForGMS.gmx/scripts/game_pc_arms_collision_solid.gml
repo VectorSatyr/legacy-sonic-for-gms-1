@@ -25,7 +25,7 @@ with (character) {
     for (var n = 0; n < total; ++n) {
         ind = local_solids[| n];
         if (instance_exists(ind)) {
-            if (ind.bottom_solid and game_pc_arms_in_shape(id, ind, radius)) {
+            if (ind.bottom_solid and game_pc_arms_in_shape(self, ind, radius)) {
                 result = ind;
                 break;
             }

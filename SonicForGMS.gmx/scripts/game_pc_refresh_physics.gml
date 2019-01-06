@@ -63,7 +63,9 @@ with (character) {
         break;
     
     case Tails:
-        flight_force = 0.03125;
+        flight_base_force = 0.03125;
+        flight_ascend_force = 0.125;
+        flight_force = flight_base_force;
         flight_threshold = -1;
         if (superform) {
             speed_cap = 8;

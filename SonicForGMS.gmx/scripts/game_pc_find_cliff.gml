@@ -6,6 +6,7 @@ with (character) {
     cliff_sign = 0;
 
     var total = ds_list_size(local_solids);
+    var center = noone;
     var left = noone;
     var right = noone;
     
@@ -20,27 +21,23 @@ with (character) {
         if (instance_exists(ind)) {
             if (ind.top_solid) {
                 if (game_pc_leg_in_shape(self, ind, 0, radius)) {
-                    break;
+                    center = ind;
                 }
-                if (left == noone and game_pc_leg_in_shape(self, ind, -x_radius, radius)) {
+                if (game_pc_leg_in_shape(self, ind, -x_radius, radius)) {
                     left = ind;
                 }
-                if (right == noone and game_pc_leg_in_shape(self, ind, x_radius, radius)) {
+                if (game_pc_leg_in_shape(self, ind, x_radius, radius)) {
                     right = ind;
                 }
             }
         }
-        if (left != noone xor right != noone) {       
-            if (left) {
-                cliff_sign = 1;
-                break;
-            }
-            if (right) {
-                cliff_sign = -1;
-                break;
-            }
-        } else {
-            break;
+    }
+    if (center == noone and (left != noone xor right != noone)) {       
+        if (left) {
+            cliff_sign = 1;
+        }
+        if (right) {
+            cliff_sign = -1;
         }
     }
 }
