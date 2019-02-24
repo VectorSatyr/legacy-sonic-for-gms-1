@@ -3,7 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="2" name="datafiles"/>
+  <datafiles number="3" name="datafiles">
+    <datafile>
+      <name>docs_gm.json</name>
+      <exists>-1</exists>
+      <size>1040</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>0</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>docs_gm.json</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions>
     <extension index="0">extensions\FMODGMS</extension>
   </NewExtensions>
@@ -433,14 +451,16 @@
             </scripts>
           </scripts>
           <scripts name="Rectangle">
+            <scripts name="Common">
+              <script>scripts\rectangle_in_circle_full.gml</script>
+              <script>scripts\rectangle_in_ellipse.gml</script>
+              <script>scripts\rectangle_in_triangle_full.gml</script>
+            </scripts>
             <scripts name="Specific">
               <script>scripts\rectangle_in_quarter_ellipse.gml</script>
               <script>scripts\rectangle_in_quarter_pipe.gml</script>
+              <script>scripts\rectangle_in_view.gml</script>
             </scripts>
-            <script>scripts\rectangle_in_circle_full.gml</script>
-            <script>scripts\rectangle_in_ellipse.gml</script>
-            <script>scripts\rectangle_in_triangle_full.gml</script>
-            <script>scripts\rectangle_in_view.gml</script>
           </scripts>
         </scripts>
       </scripts>
@@ -454,7 +474,7 @@
         <script>scripts\ceil_to.gml</script>
         <script>scripts\floor_to.gml</script>
         <script>scripts\in_range.gml</script>
-        <script>scripts\round_by.gml</script>
+        <script>scripts\round_to.gml</script>
       </scripts>
       <scripts name="Shaders">
         <script>scripts\shader_set_uniform_color.gml</script>
@@ -1392,9 +1412,12 @@
     <room>rooms\CreditsRoom</room>
     <room>rooms\RestartRoom</room>
   </rooms>
-  <constants number="13">
+  <constants number="16">
     <constant name="CAMERA_HEIGHT">224</constant>
     <constant name="CAMERA_WIDTH">400</constant>
+    <constant name="INTERSECT_INSIDE">1</constant>
+    <constant name="INTERSECT_NONE">0</constant>
+    <constant name="INTERSECT_OVERLAP">2</constant>
     <constant name="MAX_GAME_SAVES">8</constant>
     <constant name="MAX_LIFE_COUNT">999</constant>
     <constant name="MAX_LIVES_VIA_RINGS">2</constant>

@@ -1,22 +1,14 @@
 /// view_follow(vind, ox, oy)
-// ---------------------------------------------------------------
-/*
-**  Moves the specified view as if view_object[vind] were set to
-**  an instance at point {ox, oy}
-**
-**  Arguments:
-**      vind        real; view port
-**      ox          real; focal point x-position
-**      oy          real; focal point y-position
-**
-**  Returns:
-**      N/A
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Moves the specified view as if view_object[vind] were set to an instance at point {ox, oy}
+ * @argument {real} vind view port
+ * @argument {real} ox focal point x-position
+ * @argument {real} oy focal point y-position
+ */
+
 var vind = argument0;
 var ox = argument1;
 var oy = argument2;
-// ---------------------------------------------------------------
 
 if (view_exists(vind)) {
     // calculate centre point

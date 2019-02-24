@@ -1,4 +1,9 @@
 /// instance_perform_user_event(inst, index)
+/**
+ * @description Executes the the given user event for the given instance (does nothing if 'index' is not in the range (0, 15))
+ * @argument {real} inst instance index
+ * @argument {real} index user event number
+ */
 
 var inst = argument0;
 var index = argument1;

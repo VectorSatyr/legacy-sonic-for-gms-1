@@ -1,4 +1,9 @@
 /// timeline_expired(obj)
+/**
+ * @description Checks if any obj (or instance) has a timeline that has reached its last moment
+ * @argument {real} obj object or instance index
+ * @returns {boolean}
+ */
 
 var obj = argument0;
 

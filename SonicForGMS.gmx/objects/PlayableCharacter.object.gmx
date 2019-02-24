@@ -520,7 +520,7 @@ if (sprite_index &gt; -1) {
 
     // handle angle
     if (angle mod image_angle_resolution != 0) {
-        angle = round_by(angle, image_angle_resolution);
+        angle = round_to(angle, image_angle_resolution);
     }
 
     // handle alpha

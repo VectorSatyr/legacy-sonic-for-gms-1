@@ -85,7 +85,7 @@ with (Camera) {
 }
 
 with (PlayableCharacter) {
-    if (not instance_on_screen(0)) {
+    if (not instance_on_screen(self)) {
         if ((mask_direction mod 180) != 0) {
             instance_activate_region(x_int - (y_radius + y_snap_distance), y_int - x_wall_radius, (y_radius + y_snap_distance) * 2, x_wall_radius * 2, true);
         } else {

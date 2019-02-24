@@ -1,24 +1,17 @@
 /// line_in_quarter_ellipse(sx1, sy1, sx2, sy2, cx, cy, xrad, yrad)
-// ---------------------------------------------------------------
-/*  
-**  Checks if the given line crosses the given quarter ellipse
-**
-**  Arguments:
-**      sx1     real; first line first point x-position
-**      sy1     real; first line first point y-position
-**      sx2     real; first line second point x-position
-**      sy2     real; first line second point y-position
-**      cx      real; ellipse centre point x-position
-**      cy      real; ellipse centre point y-position
-**      xrad    real; ellipse x-radius
-**      yrad    real; ellipse y-radius
-**
-**  Returns:
-**      Real; 0: no intersect; 1: completely inside;
-**      2: overlapping
-**
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Checks if the given line crosses the given quarter ellipse
+ * @argument {real} sx1 first line first point x-position
+ * @argument {real} sy1 first line first point y-position
+ * @argument {real} sx2 first line second point x-position
+ * @argument {real} sy2 first line second point y-position
+ * @argument {real} cx ellipse centre point x-position
+ * @argument {real} cy ellipse centre point y-position
+ * @argument {real} xrad ellipse x-radius
+ * @argument {real} yrad ellipse y-radius
+ * @returns {real} INTERSECT_NONE, INTERSECT_INSIDE or INTERSECT_OVERLAP
+ */
+
 var sx1 = argument0;
 var sy1 = argument1;
 var sx2 = argument2;
@@ -27,9 +20,8 @@ var cx = argument4;
 var cy = argument5;
 var xrad = argument6;
 var yrad = argument7;
-// ---------------------------------------------------------------
 
-var result = 1; // completely inside
+var result = INTERSECT_INSIDE;
 
 var dx1 = cx;
 var dy1 = cy;
@@ -46,11 +38,10 @@ if (dy1 > dy2) {
 
 var rectangle = line_in_rectangle(sx1, sy1, sx2, sy2, dx1, dy1, dx2, dy2);
 var ellipse = line_in_ellipse(sx1, sy1, sx2, sy2, cx, cy, abs(xrad), abs(yrad));
-
 if (rectangle == 0 or ellipse == 0) {
-    result = 0;
+    result = INTERSECT_NONE;
 } else if (rectangle == 2 or ellipse == 2) {
-    result = 2; // overlap
+    result = INTERSECT_OVERLAP;
 }
 
 return result;

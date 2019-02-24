@@ -143,7 +143,7 @@ if (game_is_running()) {
         }
 
         if (image_angle mod source.image_angle_resolution != 0) {
-            image_angle = round_by(image_angle, source.image_angle_resolution);
+            image_angle = round_to(image_angle, source.image_angle_resolution);
         }
     }
 }

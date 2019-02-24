@@ -1,22 +1,16 @@
 /// in_range(n, a, b)
-// ---------------------------------------------------------------
-/*
-**  Checks if the given value (n) is between the minimum (a) and
-**  the maximum (b), exclusively
-**
-**  Arguments:
-**      n   real; value to evaluate
-**      a   real; minimum value
-**      b   real; maximum value
-**
-**  Returns:
-**      Boolean
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Checks if the given value 'n' is between the minimum 'a' and the maximum 'b', exclusively
+ * @argument {real} n number to evaluate
+ * @argument {real} a minimum value
+ * @argument {real} b maximum value
+ * @returns {boolean}
+ */
+
 var n = argument0;
 var a = argument1;
 var b = argument2;
-// ---------------------------------------------------------------
+
 var result = false;
 
 if (n > a and n < b) {

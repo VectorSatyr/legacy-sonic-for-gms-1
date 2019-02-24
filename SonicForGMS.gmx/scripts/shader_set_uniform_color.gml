@@ -1,4 +1,9 @@
 /// shader_set_uniform_color(uniform_id, color)
+/**
+ * @description Converts a 32-bit color value to a vec3 shader constant. You must previously have gotten the "handle" of the constant using the function shader_get_uniform. 
+ * @argument {real} uniform_id shader constant handle
+ * @argument {real} color 32-bit color value
+ */
 
 var uniform_id = argument0;
 var color = argument1;

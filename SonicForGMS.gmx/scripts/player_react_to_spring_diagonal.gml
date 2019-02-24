@@ -15,7 +15,7 @@ case "entering":
 
     spinning = false;
 
-    var rotation_offset = angle_wrap(45 + round_by(ind.image_angle, 90) - mask_direction);
+    var rotation_offset = angle_wrap(45 + round_to(ind.image_angle, 90) - mask_direction);
     
     x_speed = -dsin(rotation_offset) * ind.force;
     y_speed = -dcos(rotation_offset) * ind.force;

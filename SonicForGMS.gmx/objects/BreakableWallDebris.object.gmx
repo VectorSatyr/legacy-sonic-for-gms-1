@@ -59,7 +59,7 @@ gravity_force = 0.21875;
           <argument>
             <kind>1</kind>
             <string>/// Destroy off-screen
-if (not instance_on_screen(max(sprite_width, sprite_height))) {
+if (not instance_on_screen(self, max(sprite_width, sprite_height))) {
     instance_destroy();
 }
 </string>

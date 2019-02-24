@@ -1,29 +1,21 @@
 /// point_in_quarter_ellipse(px, py, cx, cy, xrad, yrad)
-// ---------------------------------------------------------------
-/*  
-**  Checks if the given point lines within the given quarter
-**  ellipse
-**
-**  Arguments:
-**      px      real; point x-position
-**      py      real; point y-position
-**      cx      real; ellipse centre point x-position
-**      cy      real; ellipse centre point y-position
-**      xrad    real; ellipse x radius
-**      yrad    real; ellipse y radius
-**
-**  Returns:
-**      Boolean
-**
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Checks if the given point lines within the given quarter ellipse
+ * @argument {real} px point x-position
+ * @argument {real} py point y-position
+ * @argument {real} cx ellipse centre point x-position
+ * @argument {real} cy ellipse centre point y-position
+ * @argument {real} xrad ellipse x radius
+ * @argument {real} yrad ellipse y radius
+ * @returns {boolean}
+ */
+
 var px = argument0;
 var py = argument1;
 var cx = argument2;
 var cy = argument3;
 var xrad = argument4;
 var yrad = argument5;
-// ---------------------------------------------------------------
 
 var dx1 = cx;
 var dy1 = cy;

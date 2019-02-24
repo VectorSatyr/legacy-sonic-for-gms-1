@@ -1,24 +1,18 @@
 /// rectangle_in_ellipse(sx1, sy1, sx2, sy2, cx, cy, xrad, yrad)
-// ---------------------------------------------------------------
-/*  
-**  Checks if the given rectangle overlaps the given ellipse
-**
-**  Arguments:
-**      sx1     real; rectangle top-left point x-position
-**      sy1     real; rectangle top-left point y-position
-**      sx2     real; rectangle bottom-right point x-position
-**      sy2     real; rectangle bottom-right point y-position
-**      cx      real; ellipse centre point x-position
-**      cy      real; ellipse centre point y-position
-**      xrad    real; ellipse x-radius
-**      yrad    real; ellipse y-radius
-**
-**  Returns:
-**      Boolean
-**
-** source: http://math.stackexchange.com/a/243525
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Checks if the given rectangle overlaps the given ellipse
+ * @argument {real} sx1 rectangle top-left point x-position
+ * @argument {real} sy1 rectangle top-left point y-position
+ * @argument {real} sx2 rectangle bottom-right point x-position
+ * @argument {real} sy2 rectangle bottom-right point y-position
+ * @argument {real} cx ellipse centre point x-position
+ * @argument {real} cy ellipse centre point y-position
+ * @argument {real} xrad ellipse x-radius
+ * @argument {real} yrad ellipse y-radius
+ * @returns {boolean}
+ * @see {@link http://math.stackexchange.com/a/243525}
+ */
+
 var sx1 = argument0;
 var sy1 = argument1;
 var sx2 = argument2;
@@ -27,7 +21,8 @@ var cx = argument4;
 var cy = argument5;
 var xrad = argument6;
 var yrad = argument7;
-// ---------------------------------------------------------------
+
+var result = INTERSECT_NONE;
 
 var ellipse = 0;
 
@@ -39,7 +34,6 @@ if (xrad == yrad) {
     var sx = sx2 - cx;
     var sy = sy2 - cy;
     var s;
-    
     if (xrad > yrad) {
         // scale to x-radius
         s = xrad / yrad;
@@ -52,18 +46,14 @@ if (xrad == yrad) {
 }
 
 if (ellipse != 0) {
-    return ellipse; // source is in destination
-}
-
-if (point_in_rectangle(cx, cy, sx1, sy1, sx2, sy2)) {
-    return 2; // destination is in source
-}
-
-if (line_in_ellipse(sx1, sy1, sx2, sy1, cx, cy, xrad, yrad) or
+    result = ellipse; // source is in destination
+} else if (point_in_rectangle(cx, cy, sx1, sy1, sx2, sy2)) {
+    result = INTERSECT_OVERLAP; // destination is in source
+} else if (line_in_ellipse(sx1, sy1, sx2, sy1, cx, cy, xrad, yrad) or
     line_in_ellipse(sx1, sy1, sx1, sy2, cx, cy, xrad, yrad) or
     line_in_ellipse(sx2, sy1, sx2, sy2, cx, cy, xrad, yrad) or
     line_in_ellipse(sx1, sy2, sx2, sy2, cx, cy, xrad, yrad)) {
-    return 2; // overlapping by edge
+    result = INTERSECT_OVERLAP; // overlapping by edge
 }
 
-return 0;
+return result;

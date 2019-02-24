@@ -5,7 +5,7 @@ var phase = argument1;
 
 switch (phase) {
 case "checking":
-    var rotation_offset = angle_wrap(round_by(ind.image_angle, 90) - mask_direction);
+    var rotation_offset = angle_wrap(round_to(ind.image_angle, 90) - mask_direction);
 
     if (game_pc_arms_in_shape(self, ind, x_wall_radius)) {
         if ((rotation_offset == 270 and x_speed < 0) or rotation_offset == 90 and x_speed > 0) {
@@ -28,7 +28,7 @@ case "checking":
     break;
 
 case "entering":
-    var rotation_offset = angle_wrap(round_by(ind.image_angle, 90) - mask_direction);
+    var rotation_offset = angle_wrap(round_to(ind.image_angle, 90) - mask_direction);
 
     var x_spring_speed = -dsin(rotation_offset) * ind.force;
     var y_spring_speed = -dcos(rotation_offset) * ind.force;

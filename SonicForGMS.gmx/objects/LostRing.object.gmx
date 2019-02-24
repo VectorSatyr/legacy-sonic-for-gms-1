@@ -73,7 +73,7 @@ anim_speed = 0.5;
           <argument>
             <kind>1</kind>
             <string>/// Destroy off-screen (otherwise, animate)
-if (not instance_on_screen(max(sprite_width, sprite_height))) {
+if (not instance_on_screen(self, max(sprite_width, sprite_height))) {
     instance_destroy();
 }
 

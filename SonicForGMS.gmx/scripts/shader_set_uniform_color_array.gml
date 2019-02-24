@@ -1,4 +1,9 @@
 /// shader_set_uniform_color_array(uniform_id, colors)
+/**
+ * @description Converts an array of 32-bit color values to a vec3 shader constant array. You must previously have gotten the "handle" of the array using the function shader_get_uniform. 
+ * @argument {real} uniform_id shader constant array handle
+ * @argument {real} colors array of 32-bit color values
+ */
 
 var uniform_id = argument0;
 var colors = argument1;

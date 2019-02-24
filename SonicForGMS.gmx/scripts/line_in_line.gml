@@ -1,25 +1,19 @@
 /// line_in_line(sx1, sy1, sx2, sy2, dx1, dy1, dx2, dy2)
-// ---------------------------------------------------------------
-/*  
-**  Checks if the given line segments intersect each other
-**
-**  Arguments:
-**      sx1 real; first line first point x-position
-**      sy1 real; first line first point y-position
-**      sx2 real; first line second point x-position
-**      sy2 real; first line second point y-position
-**      dx1 real; second line first point x-position
-**      dy1 real; second line first point y-position
-**      dx2 real; second line second point x-position
-**      dy2 real; second line second point y-position
-**
-**  Returns:
-**      Boolean
-**
-** Copyright 2001 softSurfer, 2012 Dan Sunday
-** source: http://geomalgorithms.com/a05-_intersect-1.html#intersect2D_2Segments()
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Checks if the given line segments intersect each other
+ * @argument {real} sx1  first line first point x-position
+ * @argument {real} sy1  first line first point y-position
+ * @argument {real} sx2  first line second point x-position
+ * @argument {real} sy2  first line second point y-position
+ * @argument {real} dx1  second line first point x-position
+ * @argument {real} dy1  second line first point y-position
+ * @argument {real} dx2  second line second point x-position
+ * @argument {real} dy2  second line second point y-position
+ * @returns {boolean}
+ * @copyright 2001 softSurfer, 2012 Dan Sunday
+ * @see {@link http://geomalgorithms.com/a05-_intersect-1.html#intersect2D_2Segments()}
+ */
+
 var sx1 = argument0;
 var sy1 = argument1;
 var sx2 = argument2;
@@ -28,7 +22,6 @@ var dx1 = argument4;
 var dy1 = argument5;
 var dx2 = argument6;
 var dy2 = argument7;
-// ---------------------------------------------------------------
 
 var intersect = false;
 
