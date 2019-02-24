@@ -24,8 +24,8 @@ with (character) {
         if (ceiling.sticky and y_speed <= ceiling_land_threshold and
             state != player_is_jumping and in_range(diff, 45, 90)) {
             game_pc_land(self, ceiling);
-            game_pc_redirect(self, new_direction);
-            game_pc_align(self, new_mask_direction);
+            game_pc_redirect(self, new_dir);
+            game_pc_align(self, new_mask_dir);
         } else {
             var dir = new_dir - gravity_direction;
             game_pc_translate_speed(self, (dcos(dir) * x_speed) - (dsin(dir) * y_speed), dir);
