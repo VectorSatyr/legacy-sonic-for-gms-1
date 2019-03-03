@@ -232,13 +232,14 @@ ds_queue_enqueue(headers, "SPECIAL THANKS TO");
 ds_queue_enqueue(text, "DAMIZEAN#
 ROGUEYOSHI#
 KAIN#
-MERCURY");
+MERCURY#
+XOT");
 
 ds_queue_enqueue(headers, "SPECIAL THANKS TO");
-ds_queue_enqueue(text, "XOT#
+ds_queue_enqueue(text, "JONATHAN LAM#
+JAVIER MORA#
 NOAH COPELAND#
-POLAR EXELION#
-JAVIER MORA");
+POLAR EXELION");
 
 ds_queue_enqueue(headers, "DEVELOPED BY");
 ds_queue_enqueue(text, "VECTORSATYR");

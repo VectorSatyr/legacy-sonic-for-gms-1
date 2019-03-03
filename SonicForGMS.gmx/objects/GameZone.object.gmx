@@ -54,8 +54,16 @@ total_ring_count = undefined;
           <argument>
             <kind>1</kind>
             <string>/// Play music
-if (music &gt; -1) {
-    game_audio_enqueue_music(music, 2, true);
+switch (typeof(music)) {
+case "number":
+    if (music &gt; -1) {
+        game_audio_enqueue_music(music, 2, true);
+    }
+    break;
+
+case "string":
+    game_audio_enqueue_music_fmod(music);
+    break;
 }
 </string>
           </argument>

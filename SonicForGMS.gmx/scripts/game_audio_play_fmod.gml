@@ -1,17 +1,11 @@
-/// game_audio_play_fmod(soundid, [loops])
+/// game_audio_play_fmod(soundid)
 /**
  * @description Starts FMOD sound playback
  * @argument {real} soundid sound index
- * @argument {boolean} loops (optional) whether or not the music repeats indefinitely
  * @returns {real} FMOD index of played audio (-1 on error)
  */
 
-var loops = false;
-switch (argument_count) {
-case 2: var loops = argument[1];
-default:
-    var soundid = argument[0];
-}
+var soundid = argument0;
 
 var index = -1;
 
@@ -19,8 +13,8 @@ with (FMODAudioSystem) {
     index = ds_map_find_value(sounds, soundid);
     if (not is_undefined(index)) {
         if (index > -1) {
-            FMODGMS_Snd_Set_LoopMode(index, loops, -1);
             FMODGMS_Snd_PlaySound(index, channel);
+            FMODGMS_Chan_Set_Volume(channel, volume_music);
             if (instance_exists(PausedScreen)) {
                 FMODGMS_Chan_PauseChannel(channel);
             }

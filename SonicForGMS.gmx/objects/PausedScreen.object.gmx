@@ -40,7 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize
-audio_pause_all();
+game_audio_pause_all();
 with (GameSign) {
     paused = true;
 }
@@ -81,7 +81,7 @@ with (GameSign) {
           <argument>
             <kind>1</kind>
             <string>/// Clean up
-audio_resume_all();
+game_audio_resume_all();
 with (GameSign) {
     paused = false;
 }
