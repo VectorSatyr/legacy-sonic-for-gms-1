@@ -33,8 +33,8 @@ loops = false;
 playing = false;
 finished = false;
 index = -1;
-next = -1;
-previous = -1;
+next = noone;
+previous = noone;
 </string>
           </argument>
         </arguments>
@@ -68,9 +68,9 @@ with (previous) {
 
 event_user(1); // stop
 
-if (next == -1 and previous != -1) {
+if (next == noone) {
     with (previous) {
-        if (not finished and index == -1) {
+        if (not (playing or finished)) {
             event_user(0); // start
         }
     }

@@ -78,10 +78,12 @@ track_position = 0;
           <argument>
             <kind>1</kind>
             <string>/// Fade in
-if (next == -1 and previous != -1) {
-    if (previous.index != -1) {
-        audio_sound_set_track_position(previous.index, track_position);
-        game_audio_fade_in(previous, fade_time);
+if (next == noone) {
+    with (previous) {
+        if (playing) {
+            game_audio_fade_in_music(other.fade_time, self);
+            audio_sound_set_track_position(index, other.track_position);
+        }
     }
 }
 </string>

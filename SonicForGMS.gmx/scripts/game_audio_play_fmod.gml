@@ -1,19 +1,17 @@
 /// game_audio_play_fmod(soundid, [loops])
-// ---------------------------------------------------------------
-/*
-**  Starts FMOD sound playback.
-**
-**  Returns:
-**      Real; index of played audio.
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Starts FMOD sound playback
+ * @argument {real} soundid sound index
+ * @argument {boolean} loops (optional) whether or not the music repeats indefinitely
+ * @returns {real} FMOD index of played audio (-1 on error)
+ */
+
 var loops = false;
 switch (argument_count) {
 case 2: var loops = argument[1];
 default:
     var soundid = argument[0];
 }
-// ---------------------------------------------------------------
 
 var index = -1;
 

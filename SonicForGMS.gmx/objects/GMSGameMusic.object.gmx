@@ -26,16 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Update
-if (index != -1 and not finished) {
-    if (not playing) {
-        if (audio_is_playing(index)) {
-            playing = true;
-        }
-    } else {
-        if (not audio_is_playing(index)) {
-            playing = false;
-            finished = true;
-        }
+if (playing and not finished) {
+    if (not audio_is_playing(index)) {
+        playing = false;
+        finished = true;
+        index = -1;
     }
 }
 </string>
@@ -61,8 +56,9 @@ if (index != -1 and not finished) {
           <argument>
             <kind>1</kind>
             <string>/// Stop
-if (playing and index != -1) {
+if (playing) {
     audio_stop_sound(index);
+    playing = false;
     index = -1;
 }
 </string>
@@ -88,8 +84,11 @@ if (playing and index != -1) {
           <argument>
             <kind>1</kind>
             <string>/// Start
-index = game_audio_play_music(soundid, priority, loops);
-playing = true;
+if (not (playing or finished)) {
+    index = game_audio_play_music(soundid, priority, loops);
+    playing = true;
+    finished = false;
+}
 </string>
           </argument>
         </arguments>

@@ -109,7 +109,7 @@ case "enter":
     current_text = ds_queue_dequeue(text);
     if (ds_queue_empty(headers) or ds_queue_empty(text)) {
         finished = true;
-        game_audio_fade_out(total_display_time);
+        game_audio_fade_out_music(total_display_time);
     }
 
     draw_set_font(font);

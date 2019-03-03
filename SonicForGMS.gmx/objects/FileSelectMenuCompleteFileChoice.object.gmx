@@ -132,7 +132,7 @@ if (game_is_running()) {
             }
         }
         if (location_index != previous) {
-            game_audio_play_sound(BeepSound, 0, false);
+            game_audio_play_sound(BeepSound);
             completion_index = 0;
         }
     }

@@ -142,7 +142,7 @@ if (game_is_running()) {
           <argument>
             <kind>1</kind>
             <string>/// Fade music
-game_audio_fade_out(120);
+game_audio_fade_out_music(120);
 </string>
           </argument>
         </arguments>

@@ -251,9 +251,8 @@ with (game_player_find(0)) {
             <string>/// Add chaos emeralds
 if (emeraldIndex &lt; 7) {
     game_save_collect_emerald(emeraldIndex, game_save_current());
+    game_audio_play_sound(ChaosEmeraldSound);
     ++emeraldIndex;
-    audio_stop_sound(ChaosEmeraldSound);
-    audio_play_sound(ChaosEmeraldSound, 0, false);
 }
 </string>
           </argument>

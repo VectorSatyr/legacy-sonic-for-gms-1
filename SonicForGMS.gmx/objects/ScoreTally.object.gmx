@@ -240,13 +240,13 @@ if (game_is_running()) {
                 state = 5;
             }
             audio_stop_sound(BeepSound);
-            game_audio_play_sound(ChingSound, 0, false);
+            game_audio_play_sound(ChingSound);
         }
         break;
     
     case 4: // continues
         if (wait_time &lt;= 0) {
-            game_audio_play_sound(ContinueSound, 0, false);
+            game_audio_play_sound(ContinueSound);
             game_save_update_continues(1, game_save_current());
             wait_time = delay_before_closing;
             ++state;

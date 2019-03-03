@@ -233,7 +233,7 @@ if (object_exists(assist_character)) {
 
 if (room_exists(location) and room != location) {
     game_screen_fade_out(BlackFadeShd, 22, location);
-    game_audio_fade_out(22);
+    game_audio_fade_out_music(22);
 }
 </string>
           </argument>

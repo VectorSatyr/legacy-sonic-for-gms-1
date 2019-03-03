@@ -1,16 +1,14 @@
 /// game_audio_enqueue_jingle(soundid, [time], [fadetime], [priority], [loops])
-// ---------------------------------------------------------------
-/*
-**  Starts music playback and queues it. The audio is managed by
-**  an instance of Jingle; destroying this instance will
-**  automatically cause the last queued music to start again.
-**  (Jingle will automatically destroy itself after it has
-**  finished playing; it will also fade in the previous music.)
-**
-**  Returns:
-**      Real; instance index of Jingle.
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Starts music playback and 'queues' it using an instance of GMSJingle; destroying this instance will automatically cause the last 'queued' music to start again (it will automatically destroy itself after it has finished playing and also fade in the previous music)
+ * @argument {real} soundid sound index
+ * @argument {real} time (optional) playback duration in steps
+ * @argument (real} fadetime (optional) fade duration in steps
+ * @argument {real} priority (optional) channel priority; lower priority sounds may be cut off
+ * @argument {boolean} loops (optional) whether or not the music repeats indefinitely
+ * @returns {real} instance index of GMSJingle
+ */
+
 var time = -1;
 var fadetime = 120;
 var priority = 10;
@@ -23,7 +21,6 @@ case 2: time = argument[1];
 default:
     var soundid = argument[0];
 }
-// ---------------------------------------------------------------
 
 var music = instance_create(0, 0, GMSJingle);
 music.soundid = soundid;
@@ -38,8 +35,8 @@ if (time > -1) {
 instance_perform_user_event(music, 0);
 
 with (GameMusic) {
-    if (next == -1 and id != music) {
-        if (index != -1) {
+    if (id != music and next == noone) {
+        if (playing) {
             music.track_position = audio_sound_get_track_position(index);
             event_user(1);
         }

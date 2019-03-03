@@ -1,16 +1,13 @@
 /// game_audio_enqueue_music_timed(soundid, [time], [priority], [loops])
-// ---------------------------------------------------------------
-/*
-**  Starts music playback and queues it. The audio is managed by
-**  an instance of TimedMusic; destroying this instance will
-**  automatically cause the last queued music to start again.
-**  (TimedMusic will automatically destroy itself after it has
-**  finished playing.)
-**
-**  Returns:
-**      Real; instance index of TimedMusic.
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Starts music playback and 'queues' it using an instance of GMSTimedGameMusic; destroying this instance will automatically cause the last 'queued' music to start again (it will automatically destroy itself after it has finished playing)
+ * @argument {real} soundid sound index
+ * @argument {real} time (optional) playback duration in steps
+ * @argument {real} priority (optional) channel priority; lower priority sounds may be cut off
+ * @argument {boolean} loops (optional) whether or not the music repeats indefinitely
+ * @returns {real} instance index of GMSTimedGameMusic
+ */
+
 var time = -1;
 var priority = 0;
 var loops = false;
@@ -21,7 +18,6 @@ case 2: time = argument[1];
 default:
     var soundid = argument[0];
 }
-// ---------------------------------------------------------------
 
 var music = instance_create(0, 0, GMSTimedGameMusic);
 music.soundid = soundid;
@@ -35,7 +31,7 @@ if (time > -1) {
 instance_perform_user_event(music, 0);
 
 with (GameMusic) {
-    if (next == -1 and id != music) {
+    if (id != music and next == noone) {
         event_user(1);
         next = music;
         music.previous = id;
