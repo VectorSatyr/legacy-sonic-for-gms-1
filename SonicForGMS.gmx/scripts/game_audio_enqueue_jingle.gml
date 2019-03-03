@@ -3,7 +3,7 @@
  * @description Starts music playback and 'queues' it using an instance of GMSJingle; destroying this instance will automatically cause the last 'queued' music to start again (it will automatically destroy itself after it has finished playing and also fade in the previous music)
  * @argument {real} soundid sound index
  * @argument {real} time (optional) playback duration in steps
- * @argument (real} fadetime (optional) fade duration in steps
+ * @argument {real} fadetime (optional) fade duration in steps
  * @argument {real} priority (optional) channel priority; lower priority sounds may be cut off
  * @argument {boolean} loops (optional) whether or not the music repeats indefinitely
  * @returns {real} instance index of GMSJingle
