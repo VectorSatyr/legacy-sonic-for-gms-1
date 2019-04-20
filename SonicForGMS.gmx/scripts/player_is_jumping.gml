@@ -64,7 +64,7 @@ case "step":
             } else {
                 if (superform) {
                     return game_pc_perform(self, player_is_super_sonic_flying);
-                } else if (owner.rings >= 50 and 
+                } else if (not stage_end and owner.rings >= 50 and 
                     not (recovery_time > 0 or invincibility_time > 0) and 
                     game_save_all_emeralds_found(game_save_current())) {
                     return game_pc_perform(self, player_is_transforming);
@@ -75,7 +75,7 @@ case "step":
             break;
 
         case Tails:
-            if (owner.rings >= 50 and 
+            if (not stage_end and owner.rings >= 50 and 
                 not (superform or recovery_time > 0 or invincibility_time > 0) and 
                 game_save_all_emeralds_found(game_save_current())) {
                 return game_pc_perform(self, player_is_transforming);
@@ -90,7 +90,7 @@ case "step":
             break;
 
         case Knuckles:
-            if (owner.rings >= 50 and 
+            if (not stage_end and owner.rings >= 50 and 
                 not (superform or recovery_time > 0 or invincibility_time > 0) and 
                 game_save_all_emeralds_found(game_save_current())) {
                 return game_pc_perform(self, player_is_transforming);

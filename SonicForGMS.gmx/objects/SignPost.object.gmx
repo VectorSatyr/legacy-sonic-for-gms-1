@@ -73,6 +73,7 @@ case "wait":
             game_pc_lose_super(player.character);
             character = player.character_id;
             event_user(0);
+            player.character.stage_end = true;
             game_pc_play_sound(player.character, SignPostSound);
             with (ZoneTimeLimit) {
                 enabled = false;
