@@ -283,6 +283,8 @@ rev_audio_pitch = audio_sound_get_pitch(SpinRevSound);
 drowning_music = noone;
 
 chain_multiplier = 0;
+
+stage_end = false;
 </string>
           </argument>
         </arguments>

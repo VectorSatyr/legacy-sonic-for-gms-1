@@ -176,6 +176,7 @@ if (not opened) {
     }
     with (PlayableCharacter) {
         game_pc_lose_super(self);
+        stage_end = true;
     }
 }
 </string>
