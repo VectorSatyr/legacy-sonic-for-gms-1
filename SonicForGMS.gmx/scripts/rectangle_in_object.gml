@@ -1,6 +1,6 @@
 /// rectangle_in_object(x1, y1, x2, y2, obj, prec, notme)
 /**
- * @description  Checks if the given rectangle crosses the given object
+ * @description Checks if the given rectangle crosses the given object
  * @argument {real} x1 rectangle left-most x-position
  * @argument {real} y1 rectangle top-most y-position
  * @argument {real} x2 rectangle bottom-most x-position

@@ -1,13 +1,7 @@
 /// game_console_reset()
-// ---------------------------------------------------------------
-/*
-**  Resets the game (stats, options, etc.) without closing the
-**  program.
-**
-**  Returns:
-**      N/A
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Resets the game (stats, options, etc.) without closing the game program
+ */
 
 // save the game
 game_save_write_all();

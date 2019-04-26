@@ -1,15 +1,13 @@
 /// game_clock_get_step()
-// ---------------------------------------------------------------
-/*
-**  Gets the current clock time in steps.
-**
-**  Returns:
-**      Boolean (or 0 on error)
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Returns the number of steps since room start (affected by GameSuspension)
+ * @returns {real} totals steps since room start
+ */
+
+var total = 0;
 
 with (GameClock) {
-    return steps;
+    total = steps;
 }
 
-return 0;
+return total;

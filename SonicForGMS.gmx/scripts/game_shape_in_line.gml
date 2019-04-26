@@ -1,4 +1,13 @@
 /// game_shape_in_line(shape, x1, y1, x2, y2)
+/**
+ * @description Checks if the given line crosses the given terrain shape
+ * @argument {real} shape instance index
+ * @argument {real} x1 line first point x-position
+ * @argument {real} y1 line first point y-position
+ * @argument {real} x2 line second point x-position
+ * @argument {real} y2 line second point y-position
+ * @returns {real} INTERSECT_NONE, INTERSECT_INSIDE or INTERSECT_OVERLAP
+ */
 
 var shape = argument0;
 var x1 = argument1;

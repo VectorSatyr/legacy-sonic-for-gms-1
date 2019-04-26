@@ -1,36 +1,22 @@
 /// game_parallax_add_sprite_layer(sprite, subimg, subspd, ox, oy, [x_tiled], [y_tiled], [x_ratio], [y_ratio], [x_separation], [y_separation], [x_speed], [y_speed]);
-// ---------------------------------------------------------------
-/*  
-**  Creates a new parallax sprite background with the given
-**  properties.
-**
-**  Arguments:
-**      sprite          Real; sprite index
-**      subimg          Real; image index to start from
-**      subspd          Real; speed to update image index
-**      ox, oy          Real; absolute position of the
-**                      background on screen
-**      x_tiled         Boolean (Optional); whether to tile the
-**                      background horizontally 
-**      y_tiled         Boolean (Optional); whether to tile the
-**                      background vertically
-**      x_ratio         Real (Optional); factor to scroll the
-**                      x-position against the view's x-position
-**      y_ratio         Real (Optional); factor to scroll the
-**                      y-position against the view's y-position
-**      x_separation    Real (Optional); amount of horizontal
-**                      space between tiled images
-**      x_separation    Real (Optional); amount of vertical
-**                      space between tiled images
-**      x_speed         Real (Optional); horizontal speed the
-**                      background will move automatically
-**      y_speed         Real (Optional); vertical speed the
-**                      background will move automatically
-**  Returns:
-**      Real (or undefined on error); instance index
-**      of ParallaxLayer
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Creates a new sprite-based parallax background with the given properties
+ * @argument {real} sprite sprite index
+ * @argument {real} subimg image index
+ * @argument {real} subspd image update speed
+ * @argument {real} ox absolute screen x-position
+ * @argument {real} oy absolute screen y-position
+ * @argument {boolean} x_tiled (Optional) whether to tile the background horizontally 
+ * @argument {boolean} y_tiled (Optional) whether to tile the background vertically
+ * @argument {real} x_ratio (Optional) factor to scroll the x-position against the view's x-position
+ * @argument {real} y_ratio (Optional) factor to scroll the y-position against the view's y-position
+ * @argument {real} x_separation (Optional) amount of horizontal space between tiled images
+ * @argument {real} y_separation (Optional) amount of vertical space between tiled images
+ * @argument {real} x_speed (Optional) horizontal speed to automatically scroll
+ * @argument {real} y_speed (Optional) vertical speed to automatically scroll
+ * @returns {real} instance index of ParallaxSpriteLayer (or undefined on error)
+ */
+
 var x_tiled = false;
 var y_tiled = false;
 var x_ratio = 1;
@@ -55,7 +41,6 @@ default:
     var subimg = argument[1];
     var sprite = argument[0];
 }
-// ---------------------------------------------------------------
 
 with (instance_create(0, 0, ParallaxSpriteLayer)) {
     sprite_index = sprite;

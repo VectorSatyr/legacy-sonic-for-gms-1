@@ -1,4 +1,13 @@
 /// game_shape_in_rectangle(shape, x1, y1, x2, y2)
+/**
+ * @description Checks if the given rectangle crosses the given terrain shape
+ * @argument {real} shape instance index
+ * @argument {real} x1 rectangle left-most x-position
+ * @argument {real} y1 rectangle top-most y-position
+ * @argument {real} x2 rectangle bottom-most x-position
+ * @argument {real} y2 rectangle right-most y-position
+ * @returns {real} INTERSECT_NONE, INTERSECT_INSIDE or INTERSECT_OVERLAP
+ */
 
 var shape = argument0;
 var x1 = argument1;

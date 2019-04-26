@@ -1,15 +1,11 @@
 /// game_is_running()
-// ---------------------------------------------------------------
-/*
-**  Checks if there are any qualifying activities during which
-**  other room objects should cease functioning.
-**
-**  Returns:
-**      Boolean
-*/
-// ---------------------------------------------------------------
+/**
+ * @description Checks if there are any qualifying activities during which other room objects should cease functioning
+ * @returns {boolean}
+ */
 
 var result = true;
+
 if (instance_exists(GameSuspension)) {
     result = false;
 }
