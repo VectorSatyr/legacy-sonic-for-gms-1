@@ -25,11 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Wrap texture
+            <string>/// Wrap texture (and animate)
 if (game_is_running()) {
     if (sprite_index != -1) {
         x = x mod (sprite_width + x_separation);
         y = y mod (sprite_height + y_separation);
+        image_speed = subspd;
+    }
+}
+else {
+    if (sprite_index != -1) {
+        image_speed = 0;
     }
 }
 </string>
