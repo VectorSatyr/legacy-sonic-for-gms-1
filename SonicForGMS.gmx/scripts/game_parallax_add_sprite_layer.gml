@@ -45,7 +45,7 @@ default:
 with (instance_create(0, 0, ParallaxSpriteLayer)) {
     sprite_index = sprite;
     image_index = subimg;
-    image_speed = subspd;
+    frame_speed = subspd;
     x_absolute = ox;
     y_absolute = oy;
     tile_horizontal = x_tiled;
