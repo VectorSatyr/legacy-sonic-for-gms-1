@@ -1,4 +1,9 @@
 /// game_menu_page_add_choice(page, choice)
+/**
+ * @description Attaches the given choice to the given menu page; if it is the first element added, it is immediately selected
+ * @argument {real} page instance index of GameMenuPage
+ * @argument {real} choice instance index of GameMenuChoice
+ */
 
 var page = argument0;
 var choice = argument1;

@@ -1,4 +1,9 @@
 /// game_menu_change_page(menu, name)
+/**
+ * @description Switches the currently enabled page on the given menu to the page with the given name, if it exists
+ * @argument {real} menu instance index of GameMenu
+ * @argument {string} name name of page to enable
+ */
 
 var menu = argument0;
 var name = argument1;
