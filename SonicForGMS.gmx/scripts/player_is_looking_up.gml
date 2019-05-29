@@ -10,7 +10,15 @@ case "start":
     game_pc_camera_direct(self, game_pc_camera_state_looking);
 
     with (camera) {
-        look_time = default_look_time;
+        if (other.input_up_pressed and double_tap_up_time > 0) {
+            look_time = default_double_tap_look_time;
+            double_tap_up_time = 0;
+        } else {
+            look_time = default_look_time;
+            if (other.input_up_pressed) {
+                double_tap_up_time = default_double_tap_buffer_time;
+            }
+        }
     }
     break;
 

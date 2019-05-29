@@ -52,8 +52,12 @@ gravity_direction = 0;
 
 freeze_time = 0;
 look_time = 0;
+double_tap_up_time = 0;
+double_tap_down_time = 0;
 
 default_look_time = 120;
+default_double_tap_buffer_time = 32;
+default_double_tap_look_time = 8;
 </string>
           </argument>
         </arguments>
@@ -83,6 +87,12 @@ if (game_is_running()) {
     }
     if (look_time &gt; 0) {
         --look_time;
+    }
+    if (double_tap_up_time &gt; 0) {
+        --double_tap_up_time;
+    }
+    if (double_tap_down_time &gt; 0) {
+        --double_tap_down_time;
     }
 }
 </string>
