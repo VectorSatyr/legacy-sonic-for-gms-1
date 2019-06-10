@@ -54,6 +54,9 @@ input_left_pressed = false;
 input_right_pressed = false;
 input_action_pressed = false;
 
+custom_super_input_enabled = true;
+input_super = false;
+
 horizontal_axis_value = 0;
 </string>
           </argument>

@@ -34,6 +34,17 @@ if (game_is_running()) {
             var input_a = game_input_event("a", channel);
             var input_b = game_input_event("b", channel);
             var input_c = game_input_event("c", channel);
+
+            if (custom_super_input_enabled) {
+                var input_a_pressed = game_input_event_pressed("a", channel);
+                var input_b_pressed = game_input_event_pressed("b", channel);
+                var input_c_pressed = game_input_event_pressed("c", channel);
+
+                input_super = 
+                    (input_a and (input_b_pressed or input_c_pressed)) or
+                    (input_b and (input_a_pressed or input_c_pressed)) or
+                    (input_c and (input_a_pressed or input_b_pressed));
+            }
         
             // on-time input
             input_up_pressed = game_input_event_pressed("up", channel);
@@ -41,7 +52,7 @@ if (game_is_running()) {
             input_left_pressed = game_input_event_pressed("left", channel);
             input_right_pressed = game_input_event_pressed("right", channel);
             input_action_pressed = (input_a or input_b or input_c) and not input_action;
-        
+
             // continuous input
             input_up = game_input_event("up", channel);
             input_down = game_input_event("down", channel);
@@ -79,6 +90,7 @@ if (game_is_running()) {
             input_left_pressed = false;
             input_right_pressed = false;
             input_action_pressed = false;
+            input_super_override = false;
         
             // continuous input
             input_up = false;

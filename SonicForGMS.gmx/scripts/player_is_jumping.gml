@@ -51,53 +51,53 @@ case "step":
         }
     }
 
-    if (input_action_pressed and jump_action_available) {
-        switch (object_index) {
-        case Sonic:
-            if (shield != noone) {
-                switch (shield.object_index) {
-                case AquaShield: return game_pc_perform(self, player_is_aqua_bouncing); break;
-                case ThunderShield: player_perform_thunder_jump(); break;
-                case FlameShield: player_perform_flame_dash(); break;
-                default: return game_pc_perform(self, player_is_drop_dashing);
+    if (jump_action_available) {
+        if (custom_super_input_enabled and input_super) {
+            if (superform) {
+                return game_pc_lose_super(self);
+            } else if (game_pc_super_available(self)) {
+                return game_pc_perform(self, player_is_transforming);
+            }
+        } else if (input_action_pressed) {
+            switch (object_index) {
+            case Sonic:
+                if (shield != noone) {
+                    switch (shield.object_index) {
+                    case AquaShield: return game_pc_perform(self, player_is_aqua_bouncing); break;
+                    case ThunderShield: player_perform_thunder_jump(); break;
+                    case FlameShield: player_perform_flame_dash(); break;
+                    default: return game_pc_perform(self, player_is_drop_dashing);
+                    }
+                } else {
+                    if (superform) {
+                        return game_pc_perform(self, player_is_super_sonic_flying);
+                    } else if (not custom_super_input_enabled and game_pc_super_available(self)) {
+                        return game_pc_perform(self, player_is_transforming);
+                    } else {
+                        return game_pc_perform(self, player_is_drop_dashing);
+                    }
                 }
-            } else {
-                if (superform) {
-                    return game_pc_perform(self, player_is_super_sonic_flying);
-                } else if (not stage_end and owner.rings >= 50 and 
-                    not (recovery_time > 0 or invincibility_time > 0) and 
-                    game_save_all_emeralds_found(game_save_current())) {
+                break;
+            case Tails:
+                if (not custom_super_input_enabled and game_pc_super_available(self)) {
                     return game_pc_perform(self, player_is_transforming);
                 } else {
-                    return game_pc_perform(self, player_is_drop_dashing);
+                    flight_time = 480;
+                    if (underwater) {
+                        return game_pc_perform(self, player_is_swimming);
+                    } else {
+                        return game_pc_perform(self, player_is_flying);
+                    }
                 }
-            }
-            break;
-
-        case Tails:
-            if (not stage_end and owner.rings >= 50 and 
-                not (superform or recovery_time > 0 or invincibility_time > 0) and 
-                game_save_all_emeralds_found(game_save_current())) {
-                return game_pc_perform(self, player_is_transforming);
-            } else {
-                flight_time = 480;
-                if (underwater) {
-                    return game_pc_perform(self, player_is_swimming);
+                break;
+            case Knuckles:
+                if (not custom_super_input_enabled and game_pc_super_available(self)) {
+                    return game_pc_perform(self, player_is_transforming);
                 } else {
-                    return game_pc_perform(self, player_is_flying);
+                    return game_pc_perform(self, player_is_gliding);
                 }
+                break;
             }
-            break;
-
-        case Knuckles:
-            if (not stage_end and owner.rings >= 50 and 
-                not (superform or recovery_time > 0 or invincibility_time > 0) and 
-                game_save_all_emeralds_found(game_save_current())) {
-                return game_pc_perform(self, player_is_transforming);
-            } else {
-                return game_pc_perform(self, player_is_gliding);
-            }
-            break;
         }
     }
 

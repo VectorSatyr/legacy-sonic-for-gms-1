@@ -717,6 +717,7 @@
             <script>scripts\game_pc_lose_super.gml</script>
             <script>scripts\game_pc_perform.gml</script>
             <script>scripts\game_pc_play_sound.gml</script>
+            <script>scripts\game_pc_super_available.gml</script>
           </scripts>
           <scripts name="Movement">
             <scripts name="Calculation">
