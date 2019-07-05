@@ -87,9 +87,6 @@ global.HUDLivesFont = font_add_sprite_ext(HUDLivesFontSprite, "0123456789", 0, 0
 global.RedSystemFont = font_add_sprite_ext(RedSystemFontSprite, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*©:.", 1, 0);
 global.SystemFont = font_add_sprite_ext(SystemFontSprite, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*©:.", 1, 0);
 
-// saves
-game_save_refresh_all();
-
 // proceed
 room_goto(SplashScreenRoom);
 </string>

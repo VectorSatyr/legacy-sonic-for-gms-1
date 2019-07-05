@@ -1,4 +1,8 @@
-/// game_save_delete(index)
+/// game_save_delete([index])
+/**
+ * @description Deletes the information of the current save 'slot' from memory (GameSaveFile) and from disk
+ * @argument {real} index (Optional) save 'slot' to delete
+ */
 
 var index = -1;
 switch (argument_count) {

@@ -1,4 +1,9 @@
 /// game_save_update_lives(player, [index])
+/**
+ * @description Updates the starting lives count on the current save 'slot'
+ * @argument {real} player player index to copy lives from
+ * @argument {real} index (Optional) save 'slot' to update
+ */
 
 var index = -1;
 switch (argument_count) {

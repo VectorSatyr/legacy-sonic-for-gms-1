@@ -1,4 +1,9 @@
 /// game_save_update_location([location], [index])
+/**
+ * @description Updates the starting location on the current save 'slot'
+ * @argument {real} location (Optional) room index; if not specified, the current room is used
+ * @argument {real} index (Optional) save 'slot' to update
+ */
 
 var index = -1;
 var location = room;

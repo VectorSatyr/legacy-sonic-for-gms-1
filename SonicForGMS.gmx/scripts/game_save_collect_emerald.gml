@@ -1,4 +1,9 @@
 /// game_save_collect_emerald(emeraldIndex, [index])
+/**
+ * @description Collects the given emerald and saves it to the currente save 'slot'
+ * @argument {real} emeraldIndex id of emerald to collect (0..6)
+ * @argument {real} index (Optional) save 'slot' to update
+ */
 
 var index = -1;
 switch (argument_count) {

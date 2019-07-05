@@ -1,4 +1,8 @@
 /// game_save_start([index])
+/**
+ * @description Starts gameplay using information from the current save 'slot'
+ * @argument {real} index (Optional) save 'slot' to pull from
+ */
 
 var index = -1;
 switch (argument_count) {

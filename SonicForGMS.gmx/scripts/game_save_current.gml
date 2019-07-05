@@ -1,4 +1,8 @@
 /// game_save_current()
+/**
+ * @description Returns the current save 'slot'
+ * @returns {real} save 'slot'
+ */
 
 var n = -1;
 

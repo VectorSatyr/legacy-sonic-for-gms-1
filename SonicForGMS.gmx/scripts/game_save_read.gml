@@ -1,4 +1,8 @@
 /// game_save_read([index])
+/**
+ * @description Reads the information from disk to the current save 'slot'
+ * @argument {real} index (Optional) save 'slot' to update
+ */
 
 var index = -1;
 switch (argument_count) {

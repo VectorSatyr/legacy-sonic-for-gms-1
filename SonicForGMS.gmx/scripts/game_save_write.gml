@@ -1,4 +1,8 @@
 /// game_save_write([index])
+/**
+ * @description Writes the information from the current save 'slot' to disk
+ * @argument {real} index (Optional) save 'slot' to write
+ */
 
 var index = -1;
 switch (argument_count) {

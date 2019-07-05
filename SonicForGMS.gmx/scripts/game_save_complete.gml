@@ -1,4 +1,8 @@
 /// game_save_complete([index])
+/**
+ * @description Marks the current save 'slot' as a 'completed' save
+ * @argument {real} index (Optional) save 'slot' to update
+ */
 
 var index = -1;
 switch (argument_count) {

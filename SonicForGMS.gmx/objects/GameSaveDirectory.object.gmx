@@ -29,7 +29,6 @@
 image_speed = 0;
 
 fname = "savedata.ini";
-total = MAX_GAME_SAVES;
 index = 0;
 </string>
           </argument>
@@ -59,7 +58,7 @@ instance_destroy(GameSaveFile);
 var section, file;
 ini_open(fname);
 index = ini_read_real("general", "last_save_index", index);
-for (var n = 0; n &lt; total; ++n) {
+for (var n = 0; n &lt; MAX_GAME_SAVES; ++n) {
     section = "save" + string(n);
     if (ini_section_exists(section)) {
         file = instance_create(0, 0, GameSaveFile);
@@ -95,6 +94,30 @@ instance_perform_user_event(GameSaveFile, 2); // read
 ini_open(fname);
 ini_write_real("general", "last_save_index", index);
 ini_close();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Read
+game_save_refresh_all();
 </string>
           </argument>
         </arguments>
