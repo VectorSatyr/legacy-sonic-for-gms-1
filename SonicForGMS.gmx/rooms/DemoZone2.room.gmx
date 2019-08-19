@@ -110,14 +110,14 @@
     <instance objName="Sonic2Capsule" x="2848" y="336" name="inst_D31FBACD" locked="0" code="ds_list_add(small_animals, Flicky);&#xA;ds_list_add(small_animals, Ricky);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="WaterRippleShader" x="80" y="0" name="inst_A731338C" locked="0" code="" scaleX="1" scaleY="1" colour="4278223103" rotation="0"/>
     <instance objName="SampleBridge" x="1632" y="352" name="inst_7E54D328" locked="0" code="" scaleX="18" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Monitor" x="112" y="256" name="inst_B5E6C9C7" locked="0" code="icon = ShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Monitor" x="208" y="256" name="inst_4DB22415" locked="0" code="icon = ThunderShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="112" y="256" name="inst_B5E6C9C7" locked="0" code="icon = ShieldIcon;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="208" y="256" name="inst_4DB22415" locked="0" code="icon = ThunderShieldIcon;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="SpikeTrap" x="688" y="352" name="inst_42FD4C0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Region" x="2048" y="0" name="inst_8DF23226" locked="0" code="" scaleX="2" scaleY="44" colour="4294967295" rotation="0"/>
     <instance objName="DemoZoneBoss" x="2048" y="0" name="inst_85E07B3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="RectangleTerrain" x="2048" y="272" name="inst_5169788E" locked="0" code="bottom_solid = false;&#xA;" scaleX="8" scaleY="2" colour="4286644096" rotation="0"/>
     <instance objName="RectangleTerrain" x="2384" y="272" name="inst_8956243E" locked="0" code="bottom_solid = false;&#xA;" scaleX="8" scaleY="2" colour="4286644096" rotation="0"/>
-    <instance objName="Monitor" x="1984" y="336" name="inst_5B7A2285" locked="0" code="icon = InvincibilityIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="1984" y="336" name="inst_5B7A2285" locked="0" code="icon = InvincibilityIcon;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="DevControl" x="96" y="0" name="inst_DF31A36B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ZoneTitle" x="32" y="0" name="inst_62982E9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Camera" x="0" y="0" name="inst_B15D90A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -125,11 +125,11 @@
     <instance objName="DevVisualization" x="112" y="0" name="inst_ED9B6DAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="PauseControl" x="64" y="0" name="inst_89F4881A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="AzureLakeBackground" x="128" y="0" name="inst_53CDDB1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Monitor" x="256" y="256" name="inst_CB65F34D" locked="0" code="icon = FlameShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Monitor" x="448" y="656" name="inst_FA309D08" locked="0" code="icon = AquaShieldIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="256" y="256" name="inst_CB65F34D" locked="0" code="icon = FlameShieldIcon;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="448" y="656" name="inst_FA309D08" locked="0" code="icon = AquaShieldIcon;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="SpikeTrap" x="560" y="656" name="inst_CA8EEBF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="GameZone" x="16" y="0" name="inst_4EF1A6EB" locked="0" code="name = &quot;DEMONSTRATION&quot;;&#xA;act = 2;&#xA;music = &quot;Studiopolis1Music&quot;;&#xA;next_room = CreditsRoom;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Monitor" x="160" y="256" name="inst_8C72BE8B" locked="0" code="icon = ExtraLifeIcon;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="GameZone" x="16" y="0" name="inst_4EF1A6EB" locked="0" code="name = &quot;DEMONSTRATION&quot;;&#xA;act = 2;&#xA;music = &quot;Studiopolis1Music&quot;;&#xA;next_room = CreditsRoom;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Monitor" x="160" y="256" name="inst_8C72BE8B" locked="0" code="icon = ExtraLifeIcon;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

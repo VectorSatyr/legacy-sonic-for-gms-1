@@ -9,14 +9,14 @@ var music = game_audio_current_music();
 switch (argument_count) {
 case 2: music = argument[1];
 default:
-    steps = argument[0];
+    var steps = argument[0];
 }
 
-var time = steps * 1000 / room_speed;
-
 if (instance_exists(music)) {
-    with (GMSAudioSystem) {
-        audio_sound_gain(music.index, 0, 0);
-        audio_sound_gain(music.index, volume_music, time);
+    with (GameAudioConfiguration) {
+        music_gain = 0;
+        music_fade_in_time = steps;
+        music_fade_rate = 1 / steps;
+        instance_perform_user_event(music, 2);
     }
 }

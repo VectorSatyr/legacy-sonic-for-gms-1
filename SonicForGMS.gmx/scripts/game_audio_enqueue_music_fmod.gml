@@ -9,7 +9,6 @@ var soundid = argument0;
 
 var music = instance_create(0, 0, FMODGameMusic);
 music.soundid = soundid;
-instance_perform_user_event(music, 0);
 
 with (GameMusic) {
     if (id != music and next == noone) {
@@ -18,5 +17,8 @@ with (GameMusic) {
         music.previous = id;
     }
 }
+
+instance_perform_user_event(GameAudioConfiguration, 0);
+instance_perform_user_event(music, 0);
 
 return music;

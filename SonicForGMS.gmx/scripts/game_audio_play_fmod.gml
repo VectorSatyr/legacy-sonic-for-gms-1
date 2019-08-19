@@ -14,7 +14,9 @@ with (FMODAudioSystem) {
     if (not is_undefined(index)) {
         if (index > -1) {
             FMODGMS_Snd_PlaySound(index, channel);
-            FMODGMS_Chan_Set_Volume(channel, volume_music);
+            with (GameAudioConfiguration) {
+                FMODGMS_Chan_Set_Volume(other.channel, volume_music * music_gain);
+            }
             if (instance_exists(PausedScreen)) {
                 FMODGMS_Chan_PauseChannel(channel);
             }

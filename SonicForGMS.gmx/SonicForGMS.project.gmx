@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="6" name="datafiles">
-    <datafiles number="6" name="Audio">
+  <datafiles number="7" name="datafiles">
+    <datafiles number="7" name="Audio">
       <datafile>
         <name>Studiopolis1Music.ogg</name>
         <exists>-1</exists>
@@ -21,6 +21,23 @@
           </Config>
         </ConfigOptions>
         <filename>Studiopolis1Music.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>InvincibilityMusic.ogg</name>
+        <exists>-1</exists>
+        <size>239039</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>InvincibilityMusic.ogg</filename>
       </datafile>
     </datafiles>
     <datafile>
@@ -52,7 +69,6 @@
         <sound>sound\CreditsMusic</sound>
         <sound>sound\DrowningMusic</sound>
         <sound>sound\GameOverMusic</sound>
-        <sound>sound\InvincibilityMusic</sound>
         <sound>sound\LifeUpMusic</sound>
         <sound>sound\MenuScreenMusic</sound>
         <sound>sound\TitleScreenMusic</sound>
@@ -521,6 +537,7 @@
           <script>scripts\game_audio_fade_out_music.gml</script>
         </scripts>
         <scripts name="Playback">
+          <script>scripts\game_audio_play.gml</script>
           <script>scripts\game_audio_play_fmod.gml</script>
           <script>scripts\game_audio_play_music.gml</script>
           <script>scripts\game_audio_play_sound.gml</script>
@@ -530,6 +547,7 @@
           <script>scripts\game_audio_enqueue_music.gml</script>
           <script>scripts\game_audio_enqueue_music_fmod.gml</script>
           <script>scripts\game_audio_enqueue_music_timed.gml</script>
+          <script>scripts\game_audio_enqueue_music_timed_fmod.gml</script>
         </scripts>
         <scripts name="Other">
           <script>scripts\game_audio_current_music.gml</script>
@@ -850,19 +868,23 @@
   <objects name="objects">
     <objects name="General">
       <objects name="Audio">
-        <objects name="Parents">
-          <object>objects\AudioSystem</object>
-          <object>objects\GameMusic</object>
-        </objects>
         <objects name="FMOD">
           <object>objects\FMODAudioSystem</object>
           <object>objects\FMODGameMusic</object>
+          <object>objects\FMODTimedGameMusic</object>
+        </objects>
+        <objects name="General">
+          <object>objects\GameAudioConfiguration</object>
         </objects>
         <objects name="GMS">
           <object>objects\GMSAudioSystem</object>
           <object>objects\GMSGameMusic</object>
           <object>objects\GMSJingle</object>
           <object>objects\GMSTimedGameMusic</object>
+        </objects>
+        <objects name="Parents">
+          <object>objects\GameAudioSystem</object>
+          <object>objects\GameMusic</object>
         </objects>
       </objects>
       <objects name="Console">

@@ -77,30 +77,41 @@
 
 	
 	
+		
 
 	
-		<li class="breadcrumb-item"><a href="../..\..\index.html">scripts</a></li>
-	
-
-
 	
 
 	
-		<li class="breadcrumb-item"><a href="../..\Game Scripts.html">Game Scripts</a></li>
+		<li class="breadcrumb-item"><a href="../..\..\..\index.html">scripts</a></li>
 	
 
 
 	
 
 	
-		<li class="breadcrumb-item"><a href="../Audio.html">Audio</a></li>
+		<li class="breadcrumb-item"><a href="../..\..\Game Scripts.html">Game Scripts</a></li>
 	
 
 
 	
 
 	
-		<li class="breadcrumb-item active" aria-current="page">Playback</li>
+		<li class="breadcrumb-item"><a href="../..\Audio.html">Audio</a></li>
+	
+
+
+	
+
+	
+		<li class="breadcrumb-item"><a href="../Playback.html">Playback</a></li>
+	
+
+
+	
+
+	
+		<li class="breadcrumb-item active" aria-current="page">game_audio_play</li>
 	
 
 
@@ -111,40 +122,70 @@
 
 
     
-
-        <h2>Playback</h2>
-
+        
         
 
-        
-        <ul class="nav flex-column">
-            
-                <li class="nav-item">
-                    
-                        <a class="nav-link" href="Playback/game_audio_play.html">game_audio_play</a>
-                    
-                </li>
-            
-                <li class="nav-item">
-                    
-                        <a class="nav-link" href="Playback/game_audio_play_fmod.html">game_audio_play_fmod</a>
-                    
-                </li>
-            
-                <li class="nav-item">
-                    
-                        <a class="nav-link" href="Playback/game_audio_play_music.html">game_audio_play_music</a>
-                    
-                </li>
-            
-                <li class="nav-item">
-                    
-                        <a class="nav-link" href="Playback/game_audio_play_sound.html">game_audio_play_sound</a>
-                    
-                </li>
-            
-        </ul>
+    
+    <h3 id="game_audio_play">game_audio_play</h3>
 
+    <p><b>Syntax: </b></p>
+    <pre class="lang-js"><code>game_audio_play(soundid, priority, loops);</code></pre>
+
+    
+    
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped js-options-table js-options-table">
+                <thead>
+                    <tr>
+                        <th>Argument name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    
+                        <tr>
+                            <td>soundid</td>
+                            <td>real</td>
+                            <td>sound index</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>priority</td>
+                            <td>real</td>
+                            <td>(optional) channel priority; lower priority sounds may be cut off</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>loops</td>
+                            <td>boolean</td>
+                            <td>(optional) whether or not the music repeats indefinitely</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+    
+    
+        <p><b>Returns:</b> (real) index of played audio (-1 on error) </p>
+    
+
+    
+    
+        <div class ="description">
+            <p><b>Description: </b></p>
+            <p>Starts audio playback (Stops all previous instances of the audio before playing)</p>
+        </div>
+    
+
+    
+    
+    
+
+    
     
 
 

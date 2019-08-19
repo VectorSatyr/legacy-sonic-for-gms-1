@@ -30,6 +30,100 @@ image_speed = 0;
 fname = "settings.ini";
 volume_sound = 1;
 volume_music = 0.75;
+music_gain = 1;
+music_fade_out_time = -1;
+music_fade_in_time = -1;
+music_fade_rate = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Gain
+if (not instance_exists(PausedScreen)) {
+    if (music_fade_out_time &gt; 0) {
+        --music_fade_out_time;
+        if (music_gain &gt; 0) {
+            music_gain -= music_fade_rate;
+            instance_perform_user_event(GameMusic, 2);
+        }
+    }
+    if (music_fade_in_time &gt; 0) {
+        --music_fade_in_time;
+        if (music_gain &lt; 1) {
+            music_gain += music_fade_rate;
+            instance_perform_user_event(GameMusic, 2);
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset gain
+music_gain = 1;
+music_fade_out_time = -1;
+music_fade_in_time = -1;
+music_fade_rate = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset
+event_user(0);
 </string>
           </argument>
         </arguments>

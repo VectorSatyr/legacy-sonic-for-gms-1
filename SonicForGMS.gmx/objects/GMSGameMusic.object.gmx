@@ -25,13 +25,63 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Update
+            <string>/// Finish
 if (playing and not finished) {
     if (not audio_is_playing(index)) {
         playing = false;
         finished = true;
         index = -1;
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Track
+position = audio_sound_get_track_position(index);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Gain
+with (GameAudioConfiguration) {
+    audio_sound_gain(other.index, volume_music * music_gain, 0);
 }
 </string>
           </argument>
@@ -86,8 +136,10 @@ if (playing) {
             <string>/// Start
 if (not (playing or finished)) {
     index = game_audio_play_music(soundid, priority, loops);
+    audio_sound_set_track_position(index, position);
     playing = true;
     finished = false;
+    position = 0;
 }
 </string>
           </argument>

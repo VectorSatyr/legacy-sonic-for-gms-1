@@ -16,17 +16,9 @@ default:
     var soundid = argument[0];
 }
 
-var index = -1;
-
-with (GMSAudioSystem) {
-    if (audio_is_playing(soundid)) {
-        audio_stop_sound(soundid);
-    }
-    index = audio_play_sound(soundid, priority, loops);
+var index = game_audio_play(soundid, priority, loops);
+with (GameAudioConfiguration) {
     audio_sound_gain(index, volume_sound, 0);
-    if (instance_exists(PausedScreen)) {
-        audio_pause_sound(index);
-    }
 }
 
 return index;

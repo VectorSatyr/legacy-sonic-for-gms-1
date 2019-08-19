@@ -1,6 +1,6 @@
-/// game_audio_play_music(soundid, [priority], [loops])
+/// game_audio_play(soundid, [priority], [loops])
 /**
- * @description Starts music playback (Stops all previous instances of the sound before playing)
+ * @description Starts audio playback (Stops all previous instances of the audio before playing)
  * @argument {real} soundid sound index
  * @argument {real} priority (optional) channel priority; lower priority sounds may be cut off
  * @argument {boolean} loops (optional) whether or not the music repeats indefinitely
@@ -16,9 +16,14 @@ default:
     var soundid = argument[0];
 }
 
-var index = game_audio_play(soundid, priority, loops);
-with (GameAudioConfiguration) {
-    audio_sound_gain(index, volume_music * music_gain, 0);
+if (audio_is_playing(soundid)) {
+    audio_stop_sound(soundid);
+}
+
+var index = audio_play_sound(soundid, priority, loops);
+
+if (instance_exists(PausedScreen)) {
+    audio_pause_sound(index);
 }
 
 return index;

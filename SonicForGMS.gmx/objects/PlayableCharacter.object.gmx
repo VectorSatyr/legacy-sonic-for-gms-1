@@ -267,7 +267,7 @@ invincibility_effect = noone;
 
 audio_emitter = audio_emitter_create();
 audio_emitter_position(audio_emitter, x, y, 0);
-with (AudioSystem) {
+with (GameAudioConfiguration) {
     audio_emitter_gain(other.audio_emitter, volume_sound);
 }
 

@@ -362,21 +362,23 @@
     <option_ios_texture_page>1024</option_ios_texture_page>
     <option_ios_use_test_ads>0</option_ios_use_test_ads>
     <option_lastchanged></option_lastchanged>
-    <option_linux_display_name>Engine</option_linux_display_name>
+    <option_linux_display_name>Sonic for Game Maker Studio</option_linux_display_name>
     <option_linux_enable_steam>0</option_linux_enable_steam>
     <option_linux_fullscreen>0</option_linux_fullscreen>
-    <option_linux_homepage>http://www.Engine.com</option_linux_homepage>
+    <option_linux_homepage></option_linux_homepage>
     <option_linux_icon>Configs\Default\linux\icon64.png</option_linux_icon>
-    <option_linux_interpolate>-1</option_linux_interpolate>
-    <option_linux_long_desc>Engine</option_linux_long_desc>
+    <option_linux_interpolate>0</option_linux_interpolate>
+    <option_linux_long_desc>Sonic For GMS is a GameMaker: Studio project acting as a template for constructing video games based on the Sonic the Hedgehog titles for the Sega Genesis / Mega Drive.
+
+All copyrights and registered trademarks of 'Sonic the Hedgehog' and all associated characters, art, names, terms and music belong to SEGA®. The contributors to this software are in no way affiliated with SEGA® or Sonic Team®, nor is any intent made to gain financially from or infringe upon said copyrights or registered trademarks.</option_linux_long_desc>
     <option_linux_maintainer_email></option_linux_maintainer_email>
     <option_linux_scale>-1</option_linux_scale>
     <option_linux_screenkey>-1</option_linux_screenkey>
-    <option_linux_short_desc>Engine</option_linux_short_desc>
+    <option_linux_short_desc>Sonic For GMS is a GameMaker: Studio project acting as a template for constructing video games based on the Sonic the Hedgehog titles for the Sega Genesis / Mega Drive.</option_linux_short_desc>
     <option_linux_sizeable>0</option_linux_sizeable>
     <option_linux_splash_png>Configs\Default\linux\splash.png</option_linux_splash_png>
     <option_linux_steam_app_id>0</option_linux_steam_app_id>
-    <option_linux_sync>0</option_linux_sync>
+    <option_linux_sync>-1</option_linux_sync>
     <option_linux_texture_page>2048</option_linux_texture_page>
     <option_linux_version_build>0</option_linux_version_build>
     <option_linux_version_major>1</option_linux_version_major>
@@ -384,19 +386,19 @@
     <option_loadalpha>255</option_loadalpha>
     <option_loadimage>nil</option_loadimage>
     <option_loadtransparent>false</option_loadtransparent>
-    <option_mac_app_category></option_mac_app_category>
+    <option_mac_app_category>Action Games : public.app-category.action-games</option_mac_app_category>
     <option_mac_app_id></option_mac_app_id>
     <option_mac_appstore_incoming_allow>0</option_mac_appstore_incoming_allow>
     <option_mac_appstore_outgoing_allow>0</option_mac_appstore_outgoing_allow>
     <option_mac_build_version>0</option_mac_build_version>
-    <option_mac_copyright_info>(c)2012 CompanyName Ltd...</option_mac_copyright_info>
-    <option_mac_create_app_store>-1</option_mac_create_app_store>
-    <option_mac_display_name>Engine</option_mac_display_name>
+    <option_mac_copyright_info>(c)SEGA, (c)Sonic Team</option_mac_copyright_info>
+    <option_mac_create_app_store>0</option_mac_create_app_store>
+    <option_mac_display_name>Sonic for Game Maker Studio</option_mac_display_name>
     <option_mac_enable_retina>0</option_mac_enable_retina>
     <option_mac_enable_steam>0</option_mac_enable_steam>
     <option_mac_fullscreen>0</option_mac_fullscreen>
     <option_mac_icon_png>Configs\Default\mac\icon512.png</option_mac_icon_png>
-    <option_mac_interpolate>-1</option_mac_interpolate>
+    <option_mac_interpolate>0</option_mac_interpolate>
     <option_mac_major_version>1</option_mac_major_version>
     <option_mac_menu_dock>0</option_mac_menu_dock>
     <option_mac_minor_version>0</option_mac_minor_version>
@@ -408,7 +410,7 @@
     <option_mac_sizeable>0</option_mac_sizeable>
     <option_mac_splash_png>Configs\Default\mac\splash.png</option_mac_splash_png>
     <option_mac_steam_app_id>0</option_mac_steam_app_id>
-    <option_mac_sync>0</option_mac_sync>
+    <option_mac_sync>1</option_mac_sync>
     <option_mac_team_id></option_mac_team_id>
     <option_mac_texture_page>2048</option_mac_texture_page>
     <option_noborder>false</option_noborder>
@@ -513,14 +515,14 @@
     <option_use_new_audio>True</option_use_new_audio>
     <option_variableerrors>False</option_variableerrors>
     <option_version>100</option_version>
-    <option_version_build>3</option_version_build>
-    <option_version_company></option_version_company>
-    <option_version_copyright></option_version_copyright>
-    <option_version_description></option_version_description>
+    <option_version_build>1</option_version_build>
+    <option_version_company>VectorSatyr</option_version_company>
+    <option_version_copyright>(c)SEGA, (c)Sonic Team</option_version_copyright>
+    <option_version_description>Sonic For GMS is a GameMaker: Studio project acting as a template for constructing video games based on the Sonic the Hedgehog titles for the Sega Genesis / Mega Drive.</option_version_description>
     <option_version_major>1</option_version_major>
     <option_version_minor>0</option_version_minor>
-    <option_version_product></option_version_product>
-    <option_version_release>0</option_version_release>
+    <option_version_product>Sonic for Game Maker Studio</option_version_product>
+    <option_version_release>10</option_version_release>
     <option_win8_advertising_appid></option_win8_advertising_appid>
     <option_win8_advertising_enable>0</option_win8_advertising_enable>
     <option_win8_advertising_key></option_win8_advertising_key>
@@ -593,19 +595,19 @@
     <option_winUAP_wide_logo>Configs\Default\WindowsUAP\logos\WideLogo.scale-100.png</option_winUAP_wide_logo>
     <option_windowcolor>$00940000</option_windowcolor>
     <option_windows_alternate_sync_method>False</option_windows_alternate_sync_method>
-    <option_windows_build_version>3</option_windows_build_version>
-    <option_windows_company_info></option_windows_company_info>
-    <option_windows_copyright_info></option_windows_copyright_info>
+    <option_windows_build_version>1</option_windows_build_version>
+    <option_windows_company_info>VectorSatyr</option_windows_company_info>
+    <option_windows_copyright_info>(c)SEGA, (c)Sonic Team</option_windows_copyright_info>
     <option_windows_create_textures_on_demand>True</option_windows_create_textures_on_demand>
-    <option_windows_description_info></option_windows_description_info>
+    <option_windows_description_info>Sonic For GMS is a GameMaker: Studio project acting as a template for constructing video games based on the Sonic the Hedgehog titles for the Sega Genesis / Mega Drive.</option_windows_description_info>
     <option_windows_enable_steam>0</option_windows_enable_steam>
     <option_windows_game_icon>Configs\Default\windows\runner_icon.ico</option_windows_game_icon>
     <option_windows_license>Configs\Default\windows\License.txt</option_windows_license>
     <option_windows_mainor_version>0</option_windows_mainor_version>
     <option_windows_major_version>1</option_windows_major_version>
     <option_windows_nsis_file>Configs\Default\windows\RunnerInstaller.nsi</option_windows_nsis_file>
-    <option_windows_product_info></option_windows_product_info>
-    <option_windows_release_version>0</option_windows_release_version>
+    <option_windows_product_info>Sonic for Game Maker Studio</option_windows_product_info>
+    <option_windows_release_version>10</option_windows_release_version>
     <option_windows_runner_finished>Configs\Default\windows\Runner_finish.bmp</option_windows_runner_finished>
     <option_windows_runner_header>Configs\Default\windows\Runner_header.bmp</option_windows_runner_header>
     <option_windows_save_location>0</option_windows_save_location>

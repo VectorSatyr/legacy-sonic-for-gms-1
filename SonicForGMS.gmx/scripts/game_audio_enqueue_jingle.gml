@@ -32,17 +32,19 @@ if (time > -1) {
 } else {
     music.time = audio_sound_length(soundid) * room_speed;
 }
-instance_perform_user_event(music, 0);
 
 with (GameMusic) {
     if (id != music and next == noone) {
         if (playing) {
-            music.track_position = audio_sound_get_track_position(index);
+            event_user(3);
             event_user(1);
         }
         next = music;
         music.previous = id;
     }
 }
+
+instance_perform_user_event(GameAudioConfiguration, 0);
+instance_perform_user_event(music, 0);
 
 return music;

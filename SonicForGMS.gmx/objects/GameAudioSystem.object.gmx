@@ -4,25 +4,11 @@
   <solid>0</solid>
   <visible>0</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
-  <parentName>GameAudioSystem</parentName>
+  <persistent>0</persistent>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="7" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -39,9 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Setup
-audio_listener_orientation(0, -1, 0, 0, 0, -1);
-audio_falloff_set_model(audio_falloff_exponent_distance);
+            <string>/// Initialize
+image_speed = 0;
 </string>
           </argument>
         </arguments>

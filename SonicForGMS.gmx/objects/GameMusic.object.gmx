@@ -33,6 +33,7 @@ loops = false;
 playing = false;
 finished = false;
 index = -1;
+position = 0;
 next = noone;
 previous = noone;
 </string>

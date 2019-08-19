@@ -25,7 +25,7 @@ with (character) {
             invincibility_effect.depth = depth - 1;
         }
         if (owner.index == 0) { // player 1 only
-            game_audio_enqueue_music_timed(InvincibilityMusic, time, 2, true);
+            game_audio_enqueue_music_timed_fmod("InvincibilityMusic", time);
         }
     }
 }

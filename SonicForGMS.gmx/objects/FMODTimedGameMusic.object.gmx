@@ -4,94 +4,11 @@
   <solid>0</solid>
   <visible>0</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
-  <parentName>GameAudioSystem</parentName>
+  <persistent>0</persistent>
+  <parentName>FMODGameMusic</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Initialize
-var handshake = FMODGMS_Util_Handshake();
-show_debug_message(handshake);
-if (handshake != "FMODGMS is working.") {
-    instance_destroy();
-} else {
-    FMODGMS_Sys_Create();
-    FMODGMS_Sys_Initialize(32);
-    channel = FMODGMS_Chan_CreateChannel();
-    sounds = ds_map_create();
-    music = -1;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Update
-FMODGMS_Sys_Update();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="3">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Cleanup
-FMODGMS_Chan_StopChannel(channel);
-FMODGMS_Sys_Close();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
         <id>604</id>
@@ -122,10 +39,39 @@ FMODGMS_Sys_Close();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Setup
-var path = working_directory + "Audio/";
-game_audio_fmod_add_sound(path + "Studiopolis1Music.ogg", 4663458);
-game_audio_fmod_add_sound(path + "InvincibilityMusic.ogg", 40930);
+            <string>/// Initialize
+time = -1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Destroy (when finished)
+if (game_is_running()) {
+    if (time &gt; 0) {
+        --time;
+        if (time &lt;= 0) {
+            instance_destroy();
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
