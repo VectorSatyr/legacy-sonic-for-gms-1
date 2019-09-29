@@ -134,7 +134,7 @@ rings_bonus = ring_count * 10;
 
 perfect_bonus = -1;
 if (game_zone_get_total_rings() == 0) {
-    perfect_bonus = 5000;
+    perfect_bonus = 50000;
 }
 
 continues_count = 0;
