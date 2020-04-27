@@ -130,7 +130,7 @@ if (total_time &gt; 570) {
     time_bonus = 0;
 }
 
-rings_bonus = ring_count * 10;
+rings_bonus = ring_count * 100;
 
 perfect_bonus = -1;
 if (game_zone_get_total_rings() == 0) {
@@ -314,7 +314,7 @@ if (view_current &lt; MAX_PLAYER_COUNT) {
     var y1 = view_yview[view_current];
 
     if (scene_act &gt; 0) {
-        draw_sprite(ZoneTitleS2ActSprite, scene_act - 1, x1 + act_screen_x + header_ox2, y1 + 62);
+        draw_sprite(ZoneTitleS2ActSprite, scene_act - 1, x1 + act_screen_x + header_ox2, y1 + act_screen_y);
     }
 
     draw_background(TimeBonusScoreBack, x1 + time_score_screen_x + time_score_ox, y1 + time_score_screen_y);
