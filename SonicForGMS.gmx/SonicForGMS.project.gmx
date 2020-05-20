@@ -420,11 +420,9 @@
   <backgrounds name="background">
     <backgrounds name="General">
       <background>background\ScanLinesBack</background>
-      <background>background\SolidPixelBack</background>
     </backgrounds>
     <backgrounds name="Level Backgrounds">
       <background>background\AzureLakeBack</background>
-      <background>background\AzureLakeTileSet</background>
       <background>background\OceanBack</background>
       <background>background\SkyBack</background>
     </backgrounds>
@@ -447,7 +445,6 @@
         <background>background\TotalBonusScoreBack</background>
       </backgrounds>
       <backgrounds name="Zone Title">
-        <background>background\ZoneTitleGameTextBack</background>
         <background>background\ZoneTitleRedFoldBack</background>
       </backgrounds>
     </backgrounds>
@@ -1252,6 +1249,7 @@
         <objects name="Signs">
           <objects name="HUD">
             <object>objects\Sonic2Display</object>
+            <object>objects\Sonic2DisplayLifeIcon</object>
           </objects>
           <objects name="Parents">
             <object>objects\AnimatedGameSign</object>
