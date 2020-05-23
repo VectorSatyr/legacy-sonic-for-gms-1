@@ -37,8 +37,8 @@ if (rectangle != 0 and ellipse != 1) {
     } else if (line_in_line(cx + xrad, cy, cx + xrad, cy + yrad, sx1, sy1, sx2, sy2) or
         line_in_line(cx, cy + yrad, cx + xrad, cy + yrad, sx1, sy1, sx2, sy2)) {
         result = INTERSECT_OVERLAP;
-    } else if (point_in_quarter_pipe(sx1, sy1, cx, cy, width, height) or
-        point_in_quarter_pipe(sx2, sy2, cx, cy, width, height)) {
+    } else if (point_in_quarter_pipe(sx1, sy1, cx, cy, xrad, yrad) or
+        point_in_quarter_pipe(sx2, sy2, cx, cy, xrad, yrad)) {
         result = INTERSECT_OVERLAP;
     }
 }
