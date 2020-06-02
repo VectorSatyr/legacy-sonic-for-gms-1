@@ -7,19 +7,6 @@ assignees: VectorSatyr
 
 ---
 
-## Labels
-All issue reports should use the _bug_ label by default. Please also add one or more of the following labels to further clarify the issue:
-_functional_: any malfunction or error in the software's intended behavior.
-_graphical_: any visual distortion or corruption in the software's appearance.
-_performance_: any egregious or excessive slowness or sluggishness of the application.
-_blocker_: only for crashes or any functional issue that prevents progression or the evaluation of other bugs
-
-## Title
-Use the following format when creating a title for the issue:
-_Platform - Location - Clear and concise description of what the bug is._
-
-## Content
-
 **Device:** Physical device used to reproduce the issue. (eg. Windows PC; Android Phone; etc.)
 **Environment:** Device operating system. (eg. Windows 10 Home; Android 5.1.1)
 **Severity:** Any of the following: 
