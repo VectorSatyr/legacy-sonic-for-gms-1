@@ -40,9 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize
-timeline_index = SonicContinueStanceAnim;
-timeline_speed = 1;
-timeline_running = true;
+timeline_set(self, SonicContinueStanceAnim);
 </string>
           </argument>
         </arguments>
@@ -66,8 +64,7 @@ timeline_running = true;
           <argument>
             <kind>1</kind>
             <string>/// React
-timeline_index = SonicContinueReactAnim;
-timeline_position = 0;
+timeline_set(self, SonicContinueReactAnim);
 </string>
           </argument>
         </arguments>

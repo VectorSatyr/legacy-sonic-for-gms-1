@@ -20,6 +20,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Change frame
+sprite_index = EggMobileEggmanIdleSprite;
 image_index = 0;
 </string>
           </argument>

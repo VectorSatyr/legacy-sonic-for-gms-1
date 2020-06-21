@@ -26,9 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Blink (Pre-Activated)
-timeline_index = LampPostBlinkAnim;
-timeline_position = 0;
-timeline_loop = true;
+timeline_set(self, LampPostBlinkAnim);
 activated = true;
 </string>
           </argument>
@@ -53,9 +51,7 @@ activated = true;
           <argument>
             <kind>1</kind>
             <string>/// Deactivate
-image_index = 0;
-timeline_index = -1;
-timeline_loop = false;
+timeline_set(self, -1);
 activated = false;
 </string>
           </argument>
@@ -80,9 +76,7 @@ activated = false;
           <argument>
             <kind>1</kind>
             <string>/// Activate
-timeline_index = LampPostHitAnim;
-timeline_position = 0;
-timeline_running = true;
+timeline_set(self, LampPostHitAnim);
 activated = true;
 </string>
           </argument>

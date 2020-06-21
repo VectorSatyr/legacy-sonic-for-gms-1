@@ -618,9 +618,8 @@ image_index = 0;
             <kind>1</kind>
             <string>/// Change animation
 image_index = 1;
-timeline_index = KnucklesRunAnim;
+timeline_set(self, KnucklesRunAnim);
 timeline_position = 2;
-timeline_loop = true;
 state = "exiting";
 </string>
           </argument>

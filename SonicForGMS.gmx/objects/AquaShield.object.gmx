@@ -40,10 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize
-timeline_index = AquaShieldAnim;
-timeline_position = 0;
-timeline_running = true;
-timeline_loop = true;
+timeline_set(self, AquaShieldAnim);
 </string>
           </argument>
         </arguments>
@@ -67,9 +64,7 @@ timeline_loop = true;
           <argument>
             <kind>1</kind>
             <string>/// Recoil
-timeline_index = AquaShieldRecoilAnim;
-timeline_position = 0;
-timeline_loop = false;
+timeline_set(self, AquaShieldRecoilAnim, 1, false);
 </string>
           </argument>
         </arguments>
@@ -93,9 +88,7 @@ timeline_loop = false;
           <argument>
             <kind>1</kind>
             <string>/// Bounce
-timeline_index = AquaShieldBounceAnim;
-timeline_position = 0;
-timeline_loop = false;
+timeline_set(self, AquaShieldBounceAnim, 1, false);
 </string>
           </argument>
         </arguments>

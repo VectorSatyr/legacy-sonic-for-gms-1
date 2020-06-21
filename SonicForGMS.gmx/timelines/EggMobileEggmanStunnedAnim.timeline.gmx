@@ -20,7 +20,8 @@
           <argument>
             <kind>1</kind>
             <string>/// Change frame
-image_index = 4;
+sprite_index = EggMobileEggmanStunnedSprite;
+image_index = 0;
 </string>
           </argument>
         </arguments>
@@ -47,10 +48,7 @@ image_index = 4;
           <argument>
             <kind>1</kind>
             <string>/// Change animation
-timeline_index = EggMobileEggmanIdleAnim;
-timeline_speed = 1;
-timeline_running = true;
-timeline_loop = true;
+timeline_set(self, EggMobileEggmanIdleAnim);
 </string>
           </argument>
         </arguments>

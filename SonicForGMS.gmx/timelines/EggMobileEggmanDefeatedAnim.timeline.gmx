@@ -20,7 +20,8 @@
           <argument>
             <kind>1</kind>
             <string>/// Change frame
-image_index = 5;
+sprite_index = EggMobileEggmanDefeatedSprite;
+image_index = 0;
 </string>
           </argument>
         </arguments>

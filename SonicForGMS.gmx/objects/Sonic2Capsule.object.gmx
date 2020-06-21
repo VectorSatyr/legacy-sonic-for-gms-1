@@ -167,9 +167,7 @@ if (total &gt; 0) {
             <kind>1</kind>
             <string>/// Open
 if (not opened) {
-    timeline_index = CapsuleTime;
-    timeline_running = true;
-    timeline_loop = false;
+    timeline_set(self, CapsuleTime, 1, false);
     opened = true;
     with (ZoneTimeLimit) {
         enabled = false;

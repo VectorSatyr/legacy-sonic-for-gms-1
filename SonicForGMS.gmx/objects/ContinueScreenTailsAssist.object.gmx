@@ -40,9 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize
-timeline_index = TailsAssistContinueStanceAnim;
-timeline_speed = 1;
-timeline_running = true;
+timeline_set(self, TailsAssistContinueStanceAnim);
 </string>
           </argument>
         </arguments>
@@ -66,8 +64,7 @@ timeline_running = true;
           <argument>
             <kind>1</kind>
             <string>/// React
-timeline_index = TailsContinueReactAnim;
-timeline_position = 0;
+timeline_set(self, TailsContinueReactAnim);
 </string>
           </argument>
         </arguments>

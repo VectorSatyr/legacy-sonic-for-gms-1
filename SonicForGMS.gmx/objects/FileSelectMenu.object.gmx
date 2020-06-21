@@ -67,10 +67,7 @@ game_menu_add_page(self, instance_create(0, 0, FileSelectMenuPage));
 
 // background animation
 var layer = game_parallax_add_sprite_layer(MenuBackgroundSprite, 0, 0, 0, 0, true, true);
-layer.timeline_index = MenuBackgroundAnim;
-layer.timeline_running = true;
-layer.timeline_loop = true;
-layer.timeline_speed = 1;
+timeline_set(back, MenuBackgroundAnim);
 
 var center_x = CAMERA_WIDTH * 0.5;
 

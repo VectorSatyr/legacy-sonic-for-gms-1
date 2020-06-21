@@ -28,9 +28,7 @@
             <string>/// Initialize
 image_speed = 0;
 
-timeline_index = SonicTheHedgehogTitleAnim;
-timeline_running = true;
-timeline_loop = false;
+timeline_set(self, SonicTheHedgehogTitleAnim, 1, false);
 
 phase = 0;
 display_time = 90;

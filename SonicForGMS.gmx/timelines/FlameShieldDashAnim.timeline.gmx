@@ -184,9 +184,7 @@ image_index = 4;
           <argument>
             <kind>1</kind>
             <string>/// Change animation
-timeline_index = FlameShieldAnim;
-timeline_position = 0;
-timeline_loop = true;
+timeline_set(self, FlameShieldAnim);
 </string>
           </argument>
         </arguments>

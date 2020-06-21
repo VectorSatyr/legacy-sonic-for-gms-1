@@ -166,8 +166,17 @@
       </sprites>
       <sprites name="Bosses">
         <sprites name="Egg Mobile">
-          <sprite>sprites\EggMobileEggmanSprite</sprite>
+          <sprite>sprites\EggMobileFlameBoostSprite</sprite>
+          <sprite>sprites\EggMobileFlameSprite</sprite>
           <sprite>sprites\EggMobileSprite</sprite>
+          <sprite>sprites\sprite181</sprite>
+        </sprites>
+        <sprites name="Eggman">
+          <sprite>sprites\EggMobileEggmanDefeatedSprite</sprite>
+          <sprite>sprites\EggMobileEggmanIdleSprite</sprite>
+          <sprite>sprites\EggMobileEggmanLaughSprite</sprite>
+          <sprite>sprites\EggMobileEggmanPanicSprite</sprite>
+          <sprite>sprites\EggMobileEggmanStunnedSprite</sprite>
         </sprites>
         <sprites name="GHZ Boss">
           <sprite>sprites\GHZBossChainBallSprite</sprite>
@@ -516,6 +525,7 @@
       </scripts>
       <scripts name="Timelines">
         <script>scripts\timeline_expired.gml</script>
+        <script>scripts\timeline_set.gml</script>
       </scripts>
       <scripts name="Vector Functions">
         <script>scripts\angle_wrap.gml</script>
@@ -1038,7 +1048,15 @@
         </objects>
         <objects name="Hazards">
           <objects name="Bosses">
-            <object>objects\BossEnemy</object>
+            <objects name="Egg Mobile">
+              <object>objects\BossEggMobile</object>
+              <object>objects\BossEggMobileComponent</object>
+              <object>objects\BossEggMobileEggman</object>
+              <object>objects\BossEggMobileFlame</object>
+            </objects>
+            <objects name="Parent">
+              <object>objects\BossEnemy</object>
+            </objects>
           </objects>
           <objects name="Enemies">
             <object>objects\Enemy</object>
@@ -1165,20 +1183,12 @@
             <object>objects\SampleScoreBumper</object>
           </objects>
           <objects name="Hazards">
-            <objects name="Bosses">
-              <objects name="Egg Mobile">
-                <object>objects\BossEggMobile</object>
-                <object>objects\BossEggMobileEggman</object>
-              </objects>
-              <objects name="GHZ Boss">
-                <object>objects\GHZBossChainBall</object>
-                <object>objects\GHZBossChainBase</object>
-                <object>objects\GHZBossChainLink</object>
-                <object>objects\GHZBossEggMobile</object>
-              </objects>
-              <objects name="Main">
-                <object>objects\DemoZoneBoss</object>
-              </objects>
+            <objects name="GHZ Boss">
+              <object>objects\DemoZoneBoss</object>
+              <object>objects\GHZBossChainBall</object>
+              <object>objects\GHZBossChainBase</object>
+              <object>objects\GHZBossChainLink</object>
+              <object>objects\GHZBossEggMobile</object>
             </objects>
           </objects>
           <objects name="Terrain">
@@ -1273,11 +1283,18 @@
         <timelines name="Animal Friends">
           <timeline>timelines\FlickyFlyAnim</timeline>
         </timelines>
-        <timelines name="Bosses">
-          <timelines name="Egg Mobile">
-            <timeline>timelines\EggMobileEggmanIdleAnim</timeline>
+        <timelines name="Egg Mobile">
+          <timelines name="Eggman">
             <timeline>timelines\EggMobileEggmanDefeatedAnim</timeline>
+            <timeline>timelines\EggMobileEggmanIdleAnim</timeline>
+            <timeline>timelines\EggMobileEggmanLaughAnim</timeline>
+            <timeline>timelines\EggMobileEggmanLosingAnim</timeline>
+            <timeline>timelines\EggMobileEggmanPanicAnim</timeline>
             <timeline>timelines\EggMobileEggmanStunnedAnim</timeline>
+          </timelines>
+          <timelines name="Flame">
+            <timeline>timelines\EggMobileFlameAnim</timeline>
+            <timeline>timelines\EggMobileFlameBoostAnim</timeline>
           </timelines>
         </timelines>
         <timelines name="Lamp Post">

@@ -884,9 +884,7 @@ image_index = 15;
           <argument>
             <kind>1</kind>
             <string>/// Change animation
-timeline_index = LampPostBlinkAnim;
-timeline_position = 0;
-timeline_loop = true;
+timeline_set(self, LampPostBlinkAnim);
 </string>
           </argument>
         </arguments>

@@ -592,9 +592,7 @@ image_index = 2;
             <kind>1</kind>
             <string>/// Change animation
 image_index = 3;
-timeline_index = SonicRunAnim;
-timeline_position = 0;
-timeline_loop = true;
+timeline_set(self, SonicRunAnim);
 state = "exiting";
 </string>
           </argument>

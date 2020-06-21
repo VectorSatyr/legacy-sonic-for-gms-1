@@ -40,10 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize
-timeline_index = FlameShieldAnim;
-timeline_position = 0;
-timeline_running = true;
-timeline_loop = true;
+timeline_set(self, FlameShieldAnim);
 </string>
           </argument>
         </arguments>
@@ -67,9 +64,7 @@ timeline_loop = true;
           <argument>
             <kind>1</kind>
             <string>/// Fireball
-timeline_index = FlameShieldDashAnim;
-timeline_position = 0;
-timeline_loop = false;
+timeline_set(self, FlameShieldDashAnim, 1, false);
 </string>
           </argument>
         </arguments>
