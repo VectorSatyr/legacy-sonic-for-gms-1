@@ -327,7 +327,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>50</step>
+    <step>48</step>
     <event>
       <action>
         <libid>1</libid>

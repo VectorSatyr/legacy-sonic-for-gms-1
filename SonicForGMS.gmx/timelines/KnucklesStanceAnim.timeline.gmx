@@ -32,7 +32,7 @@ timeline_speed = 1;
     </event>
   </entry>
   <entry>
-    <step>334</step>
+    <step>300</step>
     <event>
       <action>
         <libid>1</libid>
@@ -59,7 +59,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>352</step>
+    <step>318</step>
     <event>
       <action>
         <libid>1</libid>
@@ -86,7 +86,7 @@ image_index = 2;
     </event>
   </entry>
   <entry>
-    <step>370</step>
+    <step>336</step>
     <event>
       <action>
         <libid>1</libid>
@@ -113,7 +113,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>388</step>
+    <step>354</step>
     <event>
       <action>
         <libid>1</libid>
@@ -140,7 +140,7 @@ image_index = 2;
     </event>
   </entry>
   <entry>
-    <step>406</step>
+    <step>372</step>
     <event>
       <action>
         <libid>1</libid>
@@ -167,7 +167,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>424</step>
+    <step>390</step>
     <event>
       <action>
         <libid>1</libid>
@@ -194,7 +194,7 @@ image_index = 2;
     </event>
   </entry>
   <entry>
-    <step>442</step>
+    <step>408</step>
     <event>
       <action>
         <libid>1</libid>
@@ -221,7 +221,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>460</step>
+    <step>426</step>
     <event>
       <action>
         <libid>1</libid>
@@ -248,7 +248,7 @@ image_index = 2;
     </event>
   </entry>
   <entry>
-    <step>478</step>
+    <step>444</step>
     <event>
       <action>
         <libid>1</libid>
@@ -275,7 +275,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>496</step>
+    <step>462</step>
     <event>
       <action>
         <libid>1</libid>
@@ -302,7 +302,7 @@ image_index = 2;
     </event>
   </entry>
   <entry>
-    <step>514</step>
+    <step>480</step>
     <event>
       <action>
         <libid>1</libid>
@@ -329,7 +329,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>532</step>
+    <step>498</step>
     <event>
       <action>
         <libid>1</libid>
@@ -356,7 +356,7 @@ image_index = 2;
     </event>
   </entry>
   <entry>
-    <step>550</step>
+    <step>516</step>
     <event>
       <action>
         <libid>1</libid>
@@ -383,7 +383,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>568</step>
+    <step>534</step>
     <event>
       <action>
         <libid>1</libid>
@@ -410,7 +410,7 @@ image_index = 2;
     </event>
   </entry>
   <entry>
-    <step>586</step>
+    <step>552</step>
     <event>
       <action>
         <libid>1</libid>
@@ -437,7 +437,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>604</step>
+    <step>570</step>
     <event>
       <action>
         <libid>1</libid>
@@ -464,7 +464,7 @@ image_index = 2;
     </event>
   </entry>
   <entry>
-    <step>622</step>
+    <step>588</step>
     <event>
       <action>
         <libid>1</libid>
@@ -491,7 +491,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>640</step>
+    <step>606</step>
     <event>
       <action>
         <libid>1</libid>
@@ -518,7 +518,7 @@ image_index = 2;
     </event>
   </entry>
   <entry>
-    <step>658</step>
+    <step>624</step>
     <event>
       <action>
         <libid>1</libid>
@@ -545,7 +545,7 @@ image_index = 3;
     </event>
   </entry>
   <entry>
-    <step>688</step>
+    <step>654</step>
     <event>
       <action>
         <libid>1</libid>
@@ -572,7 +572,7 @@ image_index = 4;
     </event>
   </entry>
   <entry>
-    <step>694</step>
+    <step>660</step>
     <event>
       <action>
         <libid>1</libid>
@@ -599,7 +599,7 @@ image_index = 5;
     </event>
   </entry>
   <entry>
-    <step>700</step>
+    <step>666</step>
     <event>
       <action>
         <libid>1</libid>
@@ -626,7 +626,7 @@ image_index = 6;
     </event>
   </entry>
   <entry>
-    <step>706</step>
+    <step>672</step>
     <event>
       <action>
         <libid>1</libid>
@@ -653,7 +653,7 @@ image_index = 7;
     </event>
   </entry>
   <entry>
-    <step>712</step>
+    <step>678</step>
     <event>
       <action>
         <libid>1</libid>
@@ -680,7 +680,7 @@ image_index = 8;
     </event>
   </entry>
   <entry>
-    <step>718</step>
+    <step>684</step>
     <event>
       <action>
         <libid>1</libid>
@@ -707,7 +707,7 @@ image_index = 5;
     </event>
   </entry>
   <entry>
-    <step>724</step>
+    <step>690</step>
     <event>
       <action>
         <libid>1</libid>
@@ -734,7 +734,7 @@ image_index = 6;
     </event>
   </entry>
   <entry>
-    <step>730</step>
+    <step>696</step>
     <event>
       <action>
         <libid>1</libid>
@@ -761,7 +761,7 @@ image_index = 7;
     </event>
   </entry>
   <entry>
-    <step>736</step>
+    <step>702</step>
     <event>
       <action>
         <libid>1</libid>
@@ -788,7 +788,7 @@ image_index = 8;
     </event>
   </entry>
   <entry>
-    <step>742</step>
+    <step>708</step>
     <event>
       <action>
         <libid>1</libid>
@@ -815,7 +815,7 @@ image_index = 5;
     </event>
   </entry>
   <entry>
-    <step>748</step>
+    <step>714</step>
     <event>
       <action>
         <libid>1</libid>
@@ -842,7 +842,7 @@ image_index = 6;
     </event>
   </entry>
   <entry>
-    <step>754</step>
+    <step>720</step>
     <event>
       <action>
         <libid>1</libid>
@@ -869,7 +869,7 @@ image_index = 7;
     </event>
   </entry>
   <entry>
-    <step>760</step>
+    <step>726</step>
     <event>
       <action>
         <libid>1</libid>
@@ -896,7 +896,7 @@ image_index = 8;
     </event>
   </entry>
   <entry>
-    <step>766</step>
+    <step>732</step>
     <event>
       <action>
         <libid>1</libid>
@@ -923,7 +923,7 @@ image_index = 5;
     </event>
   </entry>
   <entry>
-    <step>772</step>
+    <step>738</step>
     <event>
       <action>
         <libid>1</libid>
@@ -950,7 +950,7 @@ image_index = 6;
     </event>
   </entry>
   <entry>
-    <step>778</step>
+    <step>744</step>
     <event>
       <action>
         <libid>1</libid>
@@ -977,7 +977,7 @@ image_index = 7;
     </event>
   </entry>
   <entry>
-    <step>784</step>
+    <step>750</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1004,7 +1004,7 @@ image_index = 8;
     </event>
   </entry>
   <entry>
-    <step>790</step>
+    <step>756</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1031,7 +1031,7 @@ image_index = 5;
     </event>
   </entry>
   <entry>
-    <step>796</step>
+    <step>762</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1058,7 +1058,7 @@ image_index = 6;
     </event>
   </entry>
   <entry>
-    <step>802</step>
+    <step>768</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1085,7 +1085,7 @@ image_index = 7;
     </event>
   </entry>
   <entry>
-    <step>808</step>
+    <step>774</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1112,7 +1112,7 @@ image_index = 8;
     </event>
   </entry>
   <entry>
-    <step>814</step>
+    <step>780</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1139,7 +1139,7 @@ image_index = 5;
     </event>
   </entry>
   <entry>
-    <step>820</step>
+    <step>786</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1166,7 +1166,7 @@ image_index = 6;
     </event>
   </entry>
   <entry>
-    <step>826</step>
+    <step>792</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1193,7 +1193,7 @@ image_index = 7;
     </event>
   </entry>
   <entry>
-    <step>832</step>
+    <step>798</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1220,7 +1220,7 @@ image_index = 8;
     </event>
   </entry>
   <entry>
-    <step>838</step>
+    <step>804</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1247,7 +1247,7 @@ image_index = 5;
     </event>
   </entry>
   <entry>
-    <step>844</step>
+    <step>810</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1274,7 +1274,7 @@ image_index = 6;
     </event>
   </entry>
   <entry>
-    <step>850</step>
+    <step>816</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1301,7 +1301,7 @@ image_index = 7;
     </event>
   </entry>
   <entry>
-    <step>856</step>
+    <step>822</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1328,7 +1328,7 @@ image_index = 8;
     </event>
   </entry>
   <entry>
-    <step>862</step>
+    <step>828</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1355,7 +1355,7 @@ image_index = 5;
     </event>
   </entry>
   <entry>
-    <step>868</step>
+    <step>834</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1382,7 +1382,7 @@ image_index = 6;
     </event>
   </entry>
   <entry>
-    <step>874</step>
+    <step>840</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1409,7 +1409,7 @@ image_index = 7;
     </event>
   </entry>
   <entry>
-    <step>880</step>
+    <step>846</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1436,7 +1436,7 @@ image_index = 8;
     </event>
   </entry>
   <entry>
-    <step>886</step>
+    <step>852</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1463,7 +1463,7 @@ image_index = 9;
     </event>
   </entry>
   <entry>
-    <step>892</step>
+    <step>858</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1490,7 +1490,7 @@ image_index = 10;
     </event>
   </entry>
   <entry>
-    <step>898</step>
+    <step>864</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1517,7 +1517,7 @@ image_index = 9;
     </event>
   </entry>
   <entry>
-    <step>904</step>
+    <step>870</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1544,7 +1544,7 @@ image_index = 10;
     </event>
   </entry>
   <entry>
-    <step>910</step>
+    <step>876</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1571,7 +1571,34 @@ image_index = 11;
     </event>
   </entry>
   <entry>
-    <step>922</step>
+    <step>888</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Change frame
+image_index = 5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>894</step>
     <event>
       <action>
         <libid>1</libid>
@@ -1598,7 +1625,7 @@ image_index = 4;
     </event>
   </entry>
   <entry>
-    <step>928</step>
+    <step>899</step>
     <event>
       <action>
         <libid>1</libid>

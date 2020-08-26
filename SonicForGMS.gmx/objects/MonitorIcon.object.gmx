@@ -27,9 +27,7 @@
             <kind>1</kind>
             <string>/// Initialize
 image_speed = 0;
-timeline_index = MonitorAnim;
-timeline_running = true;
-timeline_loop = true;
+timeline_set(self, MonitorAnim);
 icon_index = -1;
 y_speed = 0;
 life = -1;
@@ -95,7 +93,7 @@ if (game_is_running()) {
           <argument>
             <kind>1</kind>
             <string>/// Float up
-timeline_index = -1;
+timeline_set(self, -1);
 image_index = icon_index;
 ystart = y;
 y_speed = -1;

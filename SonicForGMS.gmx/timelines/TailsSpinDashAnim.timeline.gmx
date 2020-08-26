@@ -32,7 +32,7 @@ timeline_speed = 1;
     </event>
   </entry>
   <entry>
-    <step>1</step>
+    <step>2</step>
     <event>
       <action>
         <libid>1</libid>
@@ -59,7 +59,7 @@ image_index = 1;
     </event>
   </entry>
   <entry>
-    <step>2</step>
+    <step>4</step>
     <event>
       <action>
         <libid>1</libid>
@@ -80,6 +80,31 @@ image_index = 1;
             <string>/// Change frame
 image_index = 2;
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>5</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Stub</string>
           </argument>
         </arguments>
       </action>
