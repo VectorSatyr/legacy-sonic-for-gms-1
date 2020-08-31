@@ -859,6 +859,7 @@
         <script>scripts\game_zone_get_total_rings.gml</script>
         <script>scripts\game_zone_goto_next.gml</script>
         <script>scripts\game_zone_play_music.gml</script>
+        <script>scripts\game_zone_time_over.gml</script>
       </scripts>
     </scripts>
   </scripts>

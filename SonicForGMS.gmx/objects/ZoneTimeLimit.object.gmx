@@ -76,7 +76,7 @@ with (PlayerEntrance) {
 if (game_is_running()) {
     if (enabled and count &lt; limit) {
         count++;
-        if (count &gt; limit) {
+        if (count &gt;= limit) {
             count = limit;
             expired = true;
         }

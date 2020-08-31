@@ -64,6 +64,9 @@ if (game_is_running()) {
                 if (life_count &lt;= 0) {
                     instance_create(0, 0, GameOverScreen);
                     instance_destroy(other);
+                } else if (game_zone_time_over()) {
+                    instance_create(0, 0, TimeOverScreen);
+                    instance_destroy(other);
                 }
             }
         }
