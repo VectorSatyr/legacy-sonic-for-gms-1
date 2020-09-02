@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -28,11 +28,9 @@
             <string>/// Initialize
 image_speed = 0;
 
-state = 0;
+state = "entering";
 
-scene_act = game_zone_get_act();
-
-draw_set_font(global.GaslightFont);
+act = game_zone_get_act();
 
 var character_name = "SONIC";
 var ring_count = 0;
@@ -55,40 +53,63 @@ with (player) {
     }
 }
 
+draw_set_font(global.GaslightFont);
+
 header_text1 = character_name + " GOT";
 header_text2 = "THROUGH ACT";
 
 header_screen_x1 = (CAMERA_WIDTH * 0.5) - (string_width(header_text1) * 0.5);
 header_screen_y1 = 56;
+header_shadow_x1 = header_screen_x1 + 2;
+header_shadow_y1 = header_screen_y1 + 2;
 
 header_screen_x2 = (CAMERA_WIDTH * 0.5) - (string_width(header_text2) * 0.5);
 header_screen_y2 = 74;
+header_shadow_x2 = header_screen_x2 + 2;
+header_shadow_y2 = header_screen_y2 + 2;
 
 act_screen_x = (CAMERA_WIDTH * 0.5) + 88;
 act_screen_y = 62;
 
 score_label_screen_x = (CAMERA_WIDTH * 0.5) - 104;
 score_value_screen_x = (CAMERA_WIDTH * 0.5) + 96;
+time_label_screen_x = score_label_screen_x + 13;
+time_label_screen_y = 112;
+time_value_screen_x = score_value_screen_x;
+time_value_screen_y = time_label_screen_y + 1;
+ring_label_screen_x = score_label_screen_x + 12;
+ring_label_screen_y = 128;
+ring_value_screen_x = score_value_screen_x;
+ring_value_screen_y = ring_label_screen_y + 1;
+perfect_label_screen_x = score_label_screen_x;
+perfect_label_screen_y = 144;
+perfect_value_screen_x = score_value_screen_x;
+perfect_value_screen_y = perfect_label_screen_y + 1;
+total_label_screen_x = score_label_screen_x + 33;
+total_label_screen_y = 160;
+total_value_screen_x = score_value_screen_x;
+total_value_screen_y = total_label_screen_y + 1;
 continues_screen_x = score_value_screen_x + 16;
-time_score_screen_x = score_label_screen_x + 13;
-time_score_screen_y = 112;
-ring_score_screen_x = score_label_screen_x + 12;
-ring_score_screen_y = 128;
-perfect_score_screen_x = score_label_screen_x;
-perfect_score_screen_y = 144;
-total_score_screen_x = score_label_screen_x + 33;
-total_score_screen_y = 160;
-continues_screen_y = total_score_screen_y - 6;
+continues_screen_y = total_label_screen_y - 6;
 
 header_enter_speed = 16;
 header_ox1 = ceil_to(header_screen_x1 + string_width(header_text1), header_enter_speed);
 header_ox2 = ceil_to(CAMERA_WIDTH - header_screen_x2, header_enter_speed);
+if (header_ox1 &gt; header_ox2) {
+    header_enter_duration = (header_ox1 / header_enter_speed) + 1;
+} else {
+    header_enter_duration = (header_ox2 / header_enter_speed) + 1;
+}
 
 score_value_enter_speed = 16;
 time_score_ox = ceil_to(CAMERA_WIDTH - score_label_screen_x, score_value_enter_speed);
+time_score_enter_duration = time_score_ox / score_value_enter_speed;
 ring_score_ox = time_score_ox + score_value_enter_speed;
-perfect_score_ox = time_score_ox + (score_value_enter_speed * 2);
-total_score_ox = time_score_ox + (score_value_enter_speed * 3);
+ring_score_enter_duration = ring_score_ox / score_value_enter_speed;
+perfect_score_ox = ring_score_ox + score_value_enter_speed;
+perfect_score_enter_duration = perfect_score_ox / score_value_enter_speed;
+total_score_ox = perfect_score_ox + score_value_enter_speed;
+total_score_enter_duration = total_score_ox / score_value_enter_speed;
 
 continues_flash = 0;
 
@@ -98,7 +119,10 @@ delay_before_tally = 176;
 delay_before_continue = 60;
 delay_before_closing = 240;
 
-wait_time = 60;
+wait_before_start = 60;
+wait_before_score_text = wait_before_start + header_enter_duration;
+wait_before_tally = wait_before_score_text + delay_before_tally;
+timer = wait_before_tally;
 
 bonus_decrement = 100;
 
@@ -141,6 +165,140 @@ continues_count = 0;
 if (time_bonus + rings_bonus + max(perfect_bonus, 0) &gt;= 10000) {
     continues_count++;
 }
+
+if (act &gt; 0) {
+post_act_header = instance_create(act_screen_x + header_ox2, act_screen_y, AnimatedGameSign);
+post_act_header.sprite_index = ZoneTitleS2ActSprite;
+post_act_header.image_index = act - 1;
+post_act_header.destroy = false;
+game_sign_add_moment(post_act_header, header_enter_duration, wait_before_start, act_screen_x + header_ox2, act_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_act_header, 0, 0, act_screen_x, act_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+}
+
+post_header_line1 = instance_create(header_screen_x1 - header_ox1, header_screen_y1, AnimatedLabeledGameSign);
+post_header_line1.label = header_text1;
+post_header_line1.font = global.GaslightFont;
+post_header_line1.destroy = false;
+game_sign_add_moment(post_header_line1, header_enter_duration, wait_before_start, header_screen_x1 - header_ox1, header_screen_y1, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_header_line1, 0, 0, header_screen_x1, header_screen_y1, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+post_header_shadow1 = instance_create(header_shadow_x1 - header_ox1, header_shadow_y1, AnimatedLabeledGameSign);
+post_header_shadow1.label = header_text1;
+post_header_shadow1.font = global.GaslightFont;
+post_header_shadow1.destroy = false;
+game_sign_add_moment(post_header_shadow1, header_enter_duration, wait_before_start, header_shadow_x1 - header_ox1, header_shadow_y1, image_xscale, image_yscale, image_angle, c_black, image_alpha);
+game_sign_add_moment(post_header_shadow1, 0, 0, header_shadow_x1, header_shadow_y1, image_xscale, image_yscale, image_angle, c_black, image_alpha);
+
+post_header_line2 = instance_create(header_screen_x2 + header_ox2, header_screen_y2, AnimatedLabeledGameSign);
+post_header_line2.label = header_text2;
+post_header_line2.font = global.GaslightFont;
+post_header_line2.destroy = false;
+game_sign_add_moment(post_header_line2, header_enter_duration, wait_before_start, header_screen_x2 + header_ox2, header_screen_y2, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_header_line2, 0, 0, header_screen_x2, header_screen_y2, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+post_header_shadow2 = instance_create(header_shadow_x2 + header_ox2, header_shadow_y2, AnimatedLabeledGameSign);
+post_header_shadow2.label = header_text2;
+post_header_shadow2.font = global.GaslightFont;
+post_header_shadow2.destroy = false;
+game_sign_add_moment(post_header_shadow2, header_enter_duration, wait_before_start, header_shadow_x2 + header_ox2, header_shadow_y2, image_xscale, image_yscale, image_angle, c_black, image_alpha);
+game_sign_add_moment(post_header_shadow2, 0, 0, header_shadow_x2, header_shadow_y2, image_xscale, image_yscale, image_angle, c_black, image_alpha);
+
+post_time_header = instance_create(time_label_screen_x + time_score_ox, time_label_screen_y, AnimatedGameSign);
+post_time_header.sprite_index = TimeBonusScoreSprite;
+post_time_header.destroy = false;
+game_sign_add_moment(post_time_header, time_score_enter_duration, wait_before_score_text, time_label_screen_x + time_score_ox, time_label_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_time_header, 0, 0, time_label_screen_x, time_label_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+post_ring_header = instance_create(ring_label_screen_x + ring_score_ox, ring_label_screen_y, AnimatedGameSign);
+post_ring_header.sprite_index = RingBonusScoreSprite;
+post_ring_header.destroy = false;
+game_sign_add_moment(post_ring_header, ring_score_enter_duration, wait_before_score_text, ring_label_screen_x + ring_score_ox, ring_label_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_ring_header, 0, 0, ring_label_screen_x, ring_label_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+if (perfect_bonus &gt;= 0) {
+post_perfect_header = instance_create(perfect_label_screen_x + perfect_score_ox, perfect_label_screen_y, AnimatedGameSign);
+post_perfect_header.sprite_index = PerfectBonusScoreSprite;
+post_perfect_header.destroy = false;
+game_sign_add_moment(post_perfect_header, perfect_score_enter_duration, wait_before_score_text, perfect_label_screen_x + perfect_score_ox, perfect_label_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_perfect_header, 0, 0, perfect_label_screen_x, perfect_label_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+}
+
+post_score_header = instance_create(total_label_screen_x + total_score_ox, total_label_screen_y, AnimatedGameSign);
+post_score_header.sprite_index = TotalBonusScoreSprite;
+post_score_header.destroy = false;
+game_sign_add_moment(post_score_header, total_score_enter_duration, wait_before_score_text, total_label_screen_x + total_score_ox, total_label_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_score_header, 0, 0, total_label_screen_x, total_label_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+post_time_score = instance_create(time_value_screen_x + time_score_ox, time_value_screen_y, AnimatedLabeledGameSign);
+post_time_score.label = string(time_bonus);
+post_time_score.font = global.HUDFont;
+post_time_score.halign = fa_right;
+post_time_score.destroy = false;
+game_sign_add_moment(post_time_score, time_score_enter_duration, wait_before_score_text, time_value_screen_x + time_score_ox, time_value_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_time_score, 0, 0, time_value_screen_x, time_value_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+post_rings_score = instance_create(ring_value_screen_x + ring_score_ox, ring_value_screen_y, AnimatedLabeledGameSign);
+post_rings_score.label = string(rings_bonus);
+post_rings_score.font = global.HUDFont;
+post_rings_score.halign = fa_right;
+post_rings_score.destroy = false;
+game_sign_add_moment(post_rings_score, ring_score_enter_duration, wait_before_score_text, ring_value_screen_x + ring_score_ox, ring_value_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_rings_score, 0, 0, ring_value_screen_x, ring_value_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+if (perfect_bonus &gt;= 0) {
+post_perfect_score = instance_create(perfect_value_screen_x + perfect_score_ox, perfect_value_screen_y, AnimatedLabeledGameSign);
+post_perfect_score.label = string(perfect_bonus);
+post_perfect_score.font = global.HUDFont;
+post_perfect_score.halign = fa_right;
+post_perfect_score.destroy = false;
+game_sign_add_moment(post_perfect_score, perfect_score_enter_duration, wait_before_score_text, perfect_value_screen_x + perfect_score_ox, perfect_value_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_perfect_score, 0, 0, perfect_value_screen_x, perfect_value_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+}
+
+post_total_score = instance_create(total_value_screen_x + total_score_ox, total_value_screen_y, AnimatedLabeledGameSign);
+post_total_score.label = string(total_bonus);
+post_total_score.font = global.HUDFont;
+post_total_score.halign = fa_right;
+post_total_score.destroy = false;
+game_sign_add_moment(post_total_score, total_score_enter_duration, wait_before_score_text, total_value_screen_x + total_score_ox, total_value_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+game_sign_add_moment(post_total_score, 0, 0, total_value_screen_x, total_value_screen_y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+post_continue_icon = instance_create(continues_screen_x, continues_screen_y, GameSign);
+post_continue_icon.sprite_index = continues_icon;
+post_continue_icon.visible = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Animate
+if (game_is_running()) {
+    switch (state) {
+    case "exiting":
+        if (continues_count &gt; 0) {
+            post_continue_icon.image_index = game_clock_get_step() div 22;
+            post_continue_icon.visible = ((timer div 16) mod 2 == 0);
+        }
+        break;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -163,195 +321,84 @@ if (time_bonus + rings_bonus + max(perfect_bonus, 0) &gt;= 10000) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Handle state
+            <string>/// Tally
 if (game_is_running()) {
-    --wait_time;
-    
     switch (state) {
-    case 0: // wait a moment
-        if (wait_time &lt;= 0) {
-            ++state;
-            if (header_ox1 &gt; header_ox2) {
-                wait_time = (header_ox1 / header_enter_speed) + 1;
-            } else {
-                wait_time = (header_ox2 / header_enter_speed) + 1;
-            }
-        }
-        break;
-    
-    case 1: // move header text
-        if (header_ox1 &gt; 0) {
-            header_ox1 -= header_enter_speed;
-        }
-        if (header_ox2 &gt; 0) {
-            header_ox2 -= header_enter_speed;
-        }
-        if (wait_time &lt;= 0) {
-            ++state;
-            wait_time = delay_before_tally;
-        }
-        break;
-    
-    case 2: // move score value text
-        if (time_score_ox &gt; 0) {
-            time_score_ox -= score_value_enter_speed;
-        }
-        if (ring_score_ox &gt; 0) {
-            ring_score_ox -= score_value_enter_speed;
-        }
-        if (perfect_score_ox &gt; 0) {
-            perfect_score_ox -= score_value_enter_speed;
-        }
-        if (total_score_ox &gt; 0) {
-            total_score_ox -= score_value_enter_speed;
-        }
-        if (wait_time &lt;= 0) {
+    case "entering":
+        --timer;
+        if (timer &lt;= 0) {
             game_audio_play_sound(BeepSound, 0, true);
-            ++state;
+            state = "tallying";
         }
         break;
     
-    case 3: // apply scores
+    case "tallying":
         var decrement = bonus_decrement;
-        if (game_input_event("a", 0) or game_input_event("b", 0) or game_input_event("c")) {
+        if (game_input_event("a", 0) or game_input_event("b", 0) or 
+            game_input_event("c", 0)) {
             decrement *= 2;
         }
         var change;
-        if (time_bonus) {
+        if (time_bonus &gt; 0) {
             change = min(time_bonus, decrement);
             time_bonus -= change;
             total_bonus += change;
             game_player_change_score(player, change);
+            post_time_score.label = string(time_bonus);
+            post_total_score.label = string(total_bonus);
         }
-        if (rings_bonus) {
+        if (rings_bonus &gt; 0) {
             change = min(rings_bonus, decrement);
             rings_bonus -= change;
             total_bonus += change;
             game_player_change_score(player, change);
+            post_rings_score.label = string(rings_bonus);
+            post_total_score.label = string(total_bonus);
         }  
-        if (perfect_bonus) {
+        if (perfect_bonus &gt; 0) {
             change = min(perfect_bonus, decrement);
             perfect_bonus -= change;
             total_bonus += change;
             game_player_change_score(player, change);
+            post_perfect_score.label = string(perfect_bonus);
+            post_total_score.label = string(total_bonus);
         }
-        if (not (time_bonus or rings_bonus or perfect_bonus)) {
-            if (continues_count &gt; 0) {
-                wait_time = delay_before_continue;
-                ++state;
-            } else {
-                wait_time = delay_before_closing;
-                state = 5;
-            }
+        if (not (time_bonus &gt; 0 or rings_bonus &gt; 0 or perfect_bonus &gt; 0)) {
             audio_stop_sound(BeepSound);
             game_audio_play_sound(ChingSound);
+            if (continues_count &gt; 0) {
+                timer = delay_before_continue;
+                state = "delaying";
+            } else {
+                timer = delay_before_closing;
+                state = "exiting";
+            }
         }
         break;
     
-    case 4: // continues
-        if (wait_time &lt;= 0) {
+    case "delaying":
+        --timer;
+        if (timer &lt;= 0) {
             game_audio_play_sound(ContinueSound);
             game_save_update_continues(1, game_save_current());
-            wait_time = delay_before_closing;
-            ++state;
+            timer = delay_before_closing;
+            state = "exiting";
         }
         break;
     
-    case 5: // move on
-        if (continues_count &gt; 0) {
-            continues_flash++;
-        }    
-        if (wait_time &lt;= 0) {
-            ++state;
+    case "exiting":
+        --timer;
+        if (timer &lt;= 0) {
             with (GamePlayer) {
                 game_player_set_rings(self, 0);
                 lives_via_rings = 0;
             }
             game_start_location_reset();
             game_zone_goto_next();
+            instance_destroy();
         }
         break;
     }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="8" enumb="73">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw scorecard
-if (view_current &lt; MAX_PLAYER_COUNT) {
-    var color = draw_get_color();
-    var x1 = view_xview[view_current];
-    var y1 = view_yview[view_current];
-
-    if (scene_act &gt; 0) {
-        draw_sprite(ZoneTitleS2ActSprite, scene_act - 1, x1 + act_screen_x + header_ox2, y1 + act_screen_y);
-    }
-
-    draw_background(TimeBonusScoreBack, x1 + time_score_screen_x + time_score_ox, y1 + time_score_screen_y);
-    draw_background(RingBonusScoreBack, x1 + ring_score_screen_x + ring_score_ox, y1 + ring_score_screen_y);
-    if (perfect_bonus &gt; -1) {
-        draw_background(PerfectBonusScoreBack, x1 + perfect_score_screen_x + perfect_score_ox, y1 + perfect_score_screen_y);
-    }
-    draw_background(TotalBonusScoreBack, x1 + total_score_screen_x + total_score_ox, y1 + total_score_screen_y);
-
-    if (continues_count &gt; 0 and state == 5 and (continues_flash div 16) mod 2 == 0) {
-        draw_sprite(continues_icon, game_clock_get_step() div 22, x1 + continues_screen_x, y1 + continues_screen_y);
-    }
-
-    // header
-    draw_set_font(global.GaslightFont);
-    draw_set_halign(fa_left);
-    draw_set_color(c_black);
-    draw_text(x1 + header_screen_x1 - header_ox1 + 2, y1 + header_screen_y1 + 2, header_text1);
-    draw_text(x1 + header_screen_x2 + header_ox2 + 2, y1 + header_screen_y2 + 2, header_text2);
-    draw_set_color(c_white);
-    draw_text(x1 + header_screen_x1 - header_ox1, y1 + header_screen_y1, header_text1);
-    draw_text(x1 + header_screen_x2 + header_ox2, y1 + header_screen_y2, header_text2);
-
-    // score values
-    draw_set_font(global.HUDFont);
-    draw_set_halign(fa_right);
-    draw_text(x1 + score_value_screen_x + time_score_ox, y1 + time_score_screen_y + 1, time_bonus);
-    draw_text(x1 + score_value_screen_x + ring_score_ox, y1 + ring_score_screen_y + 1, rings_bonus);
-    if (perfect_bonus &gt; -1) {
-        draw_text(x1 + score_value_screen_x + perfect_score_ox, y1 + perfect_score_screen_y + 1, perfect_bonus);
-    }
-    draw_text(x1 + score_value_screen_x + total_score_ox, y1 + total_score_screen_y + 1, total_bonus);
-    draw_set_color(color);
 }
 </string>
           </argument>

@@ -383,6 +383,11 @@
         <sprite>sprites\RedSystemFontSprite</sprite>
         <sprite>sprites\SystemFontSprite</sprite>
       </sprites>
+      <sprites name="Game Over">
+        <sprite>sprites\GameOverGameTextSprite</sprite>
+        <sprite>sprites\GameOverOverTextSprite</sprite>
+        <sprite>sprites\GameOverTimeTextSprite</sprite>
+      </sprites>
       <sprites name="HUD">
         <sprite>sprites\HUDLifeIconSprite</sprite>
         <sprite>sprites\HUDRingsTextSprite</sprite>
@@ -418,6 +423,12 @@
       <sprites name="Other Screens">
         <sprite>sprites\SonicTheHedgehogTitleSprite</sprite>
       </sprites>
+      <sprites name="Score Tally">
+        <sprite>sprites\PerfectBonusScoreSprite</sprite>
+        <sprite>sprites\RingBonusScoreSprite</sprite>
+        <sprite>sprites\TimeBonusScoreSprite</sprite>
+        <sprite>sprites\TotalBonusScoreSprite</sprite>
+      </sprites>
       <sprites name="Zone Title">
         <sprite>sprites\ZoneTitleS2ActSprite</sprite>
         <sprite>sprites\ZoneTitleS2GameNameSprite</sprite>
@@ -436,22 +447,11 @@
       <background>background\SkyBack</background>
     </backgrounds>
     <backgrounds name="UI Elements">
-      <backgrounds name="Game Over">
-        <background>background\GameOverGameTextBack</background>
-        <background>background\GameOverOverTextBack</background>
-        <background>background\GameOverTimeTextBack</background>
-      </backgrounds>
       <backgrounds name="Other Screens">
         <background>background\ContinueScreenStarsBack</background>
         <background>background\LegalDisclaimerInputBack</background>
         <background>background\SonicGMSLogoBack</background>
         <background>background\SonicTitlePressStartBack</background>
-      </backgrounds>
-      <backgrounds name="Score Tally">
-        <background>background\PerfectBonusScoreBack</background>
-        <background>background\RingBonusScoreBack</background>
-        <background>background\TimeBonusScoreBack</background>
-        <background>background\TotalBonusScoreBack</background>
       </backgrounds>
       <backgrounds name="Zone Title">
         <background>background\ZoneTitleRedFoldBack</background>
