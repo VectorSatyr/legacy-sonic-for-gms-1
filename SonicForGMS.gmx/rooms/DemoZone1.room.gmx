@@ -69,8 +69,8 @@
     <instance objName="QuarterPipeTerrain" x="1312" y="768" name="inst_6EB15307" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="RectangleTerrain" x="1408" y="624" name="inst_08CA74A7" locked="0" code="" scaleX="2" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="QuarterPipeTerrain" x="1536" y="512" name="inst_C96972F2" locked="0" code="depth_mask = 1;&#xA;" scaleX="1" scaleY="1" colour="4286611711" rotation="0"/>
-    <instance objName="QuarterPipeTerrain" x="1536" y="512" name="inst_3CE0B7FA" locked="0" code="depth_mask = 1;&#xA;" scaleX="1" scaleY="-1" colour="4286611711" rotation="0"/>
-    <instance objName="QuarterPipeTerrain" x="1536" y="512" name="inst_114B189E" locked="0" code="depth_mask = 2;&#xA;" scaleX="-1" scaleY="-1" colour="4294934656" rotation="0"/>
+    <instance objName="QuarterPipeTerrain" x="1536" y="512" name="inst_3CE0B7FA" locked="0" code="depth_mask = 1;&#xA;sticky = true;&#xA;" scaleX="1" scaleY="-1" colour="4286611711" rotation="0"/>
+    <instance objName="QuarterPipeTerrain" x="1536" y="512" name="inst_114B189E" locked="0" code="depth_mask = 2;&#xA;sticky = true;&#xA;" scaleX="-1" scaleY="-1" colour="4294934656" rotation="0"/>
     <instance objName="QuarterPipeTerrain" x="1536" y="512" name="inst_B9A3E189" locked="0" code="depth_mask = 2;&#xA;" scaleX="-1" scaleY="1" colour="4294934656" rotation="0"/>
     <instance objName="RectangleTerrain" x="1440" y="384" name="inst_F3AA4F41" locked="0" code="reaction_script = player_react_to_climbable_wall;" scaleX="24" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="RectangleTerrain" x="1824" y="544" name="inst_33912D01" locked="0" code="" scaleX="16" scaleY="2" colour="4294967295" rotation="0"/>
