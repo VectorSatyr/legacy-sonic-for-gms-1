@@ -44,6 +44,7 @@ game_pc_define_animation(self, "stand", SonicStanceAnim);
 game_pc_define_animation(self, "stance_loop", SonicStanceLoopAnim);
 game_pc_define_animation(self, "walk", SonicWalkAnim);
 game_pc_define_animation(self, "run", SonicRunAnim);
+game_pc_define_animation(self, "peelout", SonicPeeloutAnim);
 game_pc_define_animation(self, "brake", SonicBrakeAnim);
 game_pc_define_animation(self, "spin", SonicSpinAnim);
 game_pc_define_animation(self, "push", SonicPushAnim);
@@ -146,7 +147,9 @@ if (game_is_running() and not state_changed) {
     case player_is_running:
         image_angle = direction;
         var velocity = floor(abs(x_speed));
-        if (velocity &gt;= 6) {
+        if (velocity &gt;= peelout_speed) {
+            game_pc_animate(self, "peelout");
+        } else if (velocity &gt;= 6) {
             game_pc_animate(self, "run");
         } else {
             game_pc_animate(self, "walk");

@@ -43,6 +43,10 @@ with (character) {
     
     switch (object_index) {
     case Sonic:
+        peelout_charge = 0;
+        peelout_charge_time = 30;
+        peelout_speed = 10;
+        peelout_release_speed = 12;
         drop_dash_time = 0;
         aqua_bound_force = 8;
         aqua_bounce_force = 7.5;

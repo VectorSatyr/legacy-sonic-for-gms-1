@@ -134,6 +134,8 @@
             <sound>sound\AquaBounceSound</sound>
             <sound>sound\DropDashSound</sound>
             <sound>sound\FlameDashSound</sound>
+            <sound>sound\PeeloutChargeSound</sound>
+            <sound>sound\PeeloutDashSound</sound>
             <sound>sound\ThunderJumpSound</sound>
           </sounds>
           <sounds name="Tails">
@@ -264,6 +266,7 @@
               <sprite>sprites\SonicFlipSprite</sprite>
               <sprite>sprites\SonicHangSprite</sprite>
               <sprite>sprites\SonicLookSprite</sprite>
+              <sprite>sprites\SonicPeeloutSprite</sprite>
               <sprite>sprites\SonicPushSprite</sprite>
               <sprite>sprites\SonicReverseFlipSprite</sprite>
               <sprite>sprites\SonicRisingSprite</sprite>
@@ -643,6 +646,7 @@
                 <scripts name="Actions">
                   <script>scripts\player_is_aqua_bouncing.gml</script>
                   <script>scripts\player_is_drop_dashing.gml</script>
+                  <script>scripts\player_is_peeling_out.gml</script>
                   <script>scripts\player_is_super_sonic_flying.gml</script>
                 </scripts>
                 <scripts name="Movement">
@@ -700,6 +704,7 @@
                 <script>scripts\game_pc_camera_state_grounded.gml</script>
                 <script>scripts\game_pc_camera_state_looking.gml</script>
                 <script>scripts\game_pc_camera_state_normal.gml</script>
+                <script>scripts\game_pc_camera_state_peelout.gml</script>
               </scripts>
             </scripts>
             <scripts name="General">
@@ -1367,13 +1372,14 @@
               </timelines>
               <timelines name="General">
                 <timeline>timelines\SonicBrakeAnim</timeline>
-                <timeline>timelines\SonicHangAnim</timeline>
                 <timeline>timelines\SonicBreatheAnim</timeline>
                 <timeline>timelines\SonicCrouchAnim</timeline>
                 <timeline>timelines\SonicDeathAnim</timeline>
                 <timeline>timelines\SonicDrownAnim</timeline>
                 <timeline>timelines\SonicFlipAnim</timeline>
+                <timeline>timelines\SonicHangAnim</timeline>
                 <timeline>timelines\SonicLookAnim</timeline>
+                <timeline>timelines\SonicPeeloutAnim</timeline>
                 <timeline>timelines\SonicPushAnim</timeline>
                 <timeline>timelines\SonicRisingAnim</timeline>
                 <timeline>timelines\SonicRunAnim</timeline>
