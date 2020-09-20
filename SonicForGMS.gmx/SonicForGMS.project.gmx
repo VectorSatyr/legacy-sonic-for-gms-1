@@ -727,6 +727,7 @@
                 <script>scripts\game_pc_refresh_local_index.gml</script>
               </scripts>
               <scripts name="Intersection">
+                <script>scripts\game_pc_arm_in_shape.gml</script>
                 <script>scripts\game_pc_arms_in_shape.gml</script>
                 <script>scripts\game_pc_in_shape.gml</script>
                 <script>scripts\game_pc_leg_in_shape.gml</script>
@@ -759,6 +760,7 @@
                     <script>scripts\player_react_to_switch.gml</script>
                     <script>scripts\player_react_to_water.gml</script>
                     <script>scripts\player_react_to_world_ring.gml</script>
+                    <script>scripts\player_react_to_crush_block.gml</script>
                   </scripts>
                 </scripts>
                 <scripts name="Registration">
@@ -772,7 +774,9 @@
               </scripts>
               <scripts name="Solidity">
                 <script>scripts\game_pc_arms_collision_solid.gml</script>
+                <script>scripts\game_pc_left_collision_solid.gml</script>
                 <script>scripts\game_pc_lower_collision_solid.gml</script>
+                <script>scripts\game_pc_right_collision_solid.gml</script>
                 <script>scripts\game_pc_upper_collision_solid.gml</script>
               </scripts>
             </scripts>
