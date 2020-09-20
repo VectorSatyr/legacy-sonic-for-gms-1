@@ -26,6 +26,7 @@ with (character) {
             game_pc_define_animation(self, "stand", SonicStanceAnim);
             game_pc_define_animation(self, "walk", SonicWalkAnim);
             game_pc_define_animation(self, "run", SonicRunAnim);
+            game_pc_define_animation(self, "peelout", SonicPeeloutAnim);
             game_pc_define_animation(self, "push", SonicPushAnim);
             game_pc_define_animation(self, "crouch", SonicCrouchAnim);
             game_pc_define_animation(self, "teeter_front", SonicTeeterFrontAnim);

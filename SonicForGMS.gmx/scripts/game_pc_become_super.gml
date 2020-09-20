@@ -22,6 +22,7 @@ with (character) {
         game_pc_define_animation(self, "stand", SuperSonicStanceAnim);
         game_pc_define_animation(self, "walk", SuperSonicWalkAnim);
         game_pc_define_animation(self, "run", SuperSonicRunAnim);
+        game_pc_define_animation(self, "peelout", SuperSonicRunAnim);
         game_pc_define_animation(self, "push", SuperSonicPushAnim);
         game_pc_define_animation(self, "crouch", SuperSonicCrouchAnim);
         game_pc_define_animation(self, "teeter_front", SuperSonicTeeterAnim);

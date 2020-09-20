@@ -8,7 +8,7 @@ case "start":
 
     peelout_charge = 0;
 
-    game_pc_camera_direct(self, game_pc_camera_state_peelout);
+    game_pc_camera_direct(self, game_pc_camera_state_normal);
 
     game_pc_animate(self, "walk");
     image_angle = gravity_direction;
@@ -56,6 +56,9 @@ case "step":
 
     if (peelout_charge < peelout_charge_time) {
         ++peelout_charge;
+        if (peelout_charge == peelout_charge_time / 2) {
+            game_pc_camera_direct(self, game_pc_camera_state_peelout);
+        }
     }
 
     var relative_speed = peelout_speed / peelout_charge_time;
