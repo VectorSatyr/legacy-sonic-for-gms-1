@@ -668,7 +668,6 @@
                 <script>scripts\player_is_pushing.gml</script>
                 <script>scripts\player_is_rolling.gml</script>
                 <script>scripts\player_is_running.gml</script>
-                <script>scripts\player_is_running_in_corkscrew.gml</script>
                 <script>scripts\player_is_spindashing.gml</script>
                 <script>scripts\player_is_standing.gml</script>
               </scripts>
